@@ -315,3 +315,37 @@ mario9bis.addEventListener("click", cacher => {
 
 
 // })
+
+// profil animal :
+let profilDog = document.getElementById("profil1");
+let profilLion = document.getElementById("profil2");
+let profilCat = document.getElementById("profil3");
+let profilDolphin = document.getElementById("profil4");
+let profilAigle = document.getElementById("profil5");
+let profilTurtle = document.getElementById("profil6");
+
+let displayProfil = document.getElementById("butonAnimal");
+
+displayProfil.addEventListener("click", profilGame => {
+    if(count >=0 && count <=2){
+        profilTurtle.style.display = "block";
+
+    }
+    if(count >2 && count <=4){
+        profilCat.style.display = "block";
+              
+    }
+    if(count >=5 && count <7){
+        profilDog.style.display = "block";             
+    }
+    if(count == 7){
+        profilDolphin.style.display = "block";
+    }
+    if(count == 8){
+        profilAigle.style.display = "block";
+    }
+    if(count == 9){
+        profilLion.style.display = "block";
+    }
+
+})
