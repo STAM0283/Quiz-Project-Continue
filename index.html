@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3732c215c0.js" crossorigin="anonymous"></script>
+    <title>Le Quizz du Grenier</title>
+</head>
+<div class="counterBox">
+    <img id="songOn" src="img/volumOn.svg" alt="icon pour desactiver le son">
+    <img id="songOff" src="img/volumOff.svg" alt="icon pour activer le son">
+    <input id="inputTimer" value="00:00:00">
+    <p id="counter"></p>
+</div>
+<audio id = "marioSong"src="sounds/Super Mario Bros.mp3" loop></audio>
+<body>
+    <header> 
+        <h1 id="replayGame">Le Quizz du Grenier</h1>
+        <img src="img/retrogamingResize.jpg" alt="une image de jeux d'arcades retro">
+        <a href="#introduction">Next</a>
+    </header>
+
+    <div id="introduction">
+
+        <div class="block-introduction">
+
+            <p>Bonjour et bienvenue sur le Quizz du Grenier !<br><br>
+                Ce jeu vous est présenté par la Wild Code School, promotion de Lyon (Mai 2020).<br>
+                Le but de ce jeu est simple, nous allons tester tes connaissances en jeux vidéos rétro.
+                Sauras-tu atteindre la note maximale et rejoindre l'élite des G@m3rs aux côtés du Joueur du Grenier?<br><br> 
+                Réponse tout de suite en répondant aux questions de notre quizz spécial retrogaming.
+                En cas d'erreur, les bonnes réponses ainsi que le résultat seront dévoilés à la fin du quizz pour un suspens insoutenable.<br>
+                <br>
+                GLHF !
+            </p>
+
+            <a href="#question1">
+                <div class="start-link">
+                    <p>Start Game</p>
+                    <i class="fas fa-angle-double-down"></i>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <main>           
+        <section id='question1'>
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 1:</h2>
+                    <h3>Dans quel jeu Mario apparait-il pour la première fois ?</h3>
+                </div>
+                <img class="block-image" src="img/mario03.jpg" alt="une image du jeu mario">
+                <div class="block-response" id="responseBtn1">
+                    <button class="blue rigth">Donkey Kong Jr.</button>
+                    <button class="green wrong">Mario Bros.</button>
+                    <button class="red wrong">Mario Kart</button>
+                    <button class="yellow wrong">Super Mario</button>
+                    <audio id = "goodSong" src="sounds/goodAnswer.mp3"></audio>
+                    <audio id = "wrongSong" src="sounds/wrongAnswer.mp3"></audio>
+                </div>
+                <div id="g1" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#question2"><button>NEXT</button></a>
+                </div>
+                <div id="w1" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question2"><button>NEXT</button></a>
+                </div>
+            </div>
+
+        </section>
+        <section id='question2'>
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 2:</h2>
+                    <h3>Quel est le nom du Hero des jeux Zelda ?</h3>
+                </div>
+                <img class="block-image" src="img/zelda03.png" alt="une image du jeu zelda">
+                <div class="block-response" id="responseBtn2">
+                    <button class="blue wrong">Peach</button>
+                    <button class="green wrong">Duke</button>
+                    <button class="red wrong">Zelda</button>
+                    <button class="yellow rigth">Link</button>
+                </div>
+                <div id="g2" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#question3"><button>NEXT</button></a>
+                </div>
+                <div id="w2" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question3"><button>NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question3">
+
+        <div class="block-question">
+
+            <div class="block-title">
+                <h2>Question 3:</h2>
+                <h3>Quel est le premier jeux du genre FPS ?</h3>
+            </div>
+            <img class="block-image" src="img/wolfenstein02.png" alt="une image du jeu wolfenstein">
+            <div class="block-response" id="responseBtn3">
+                <button class="blue wrong">Call of Duty</button>
+                <button class="green wrong">Medal of Honor</button>
+                <button class="red rigth">Wolfenstein 3D</button>
+                <button class="yellow wrong">DOOM</button>
+            </div>
+            <div id="g3" class="modalGood">
+                <p>Bonne Reponse</p>
+                <a href="#question4"><button>NEXT</button></a>
+            </div>
+            <div id="w3" class="modalWrong">
+                <p>Mauvaise Reponse</p>
+                <a href="#question4"><button>NEXT</button></a>
+            </div>
+
+        </div>
+
+        </section>   
+        <section id="question4">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 4:</h2>
+                    <h3>Quel est le nom japonais de Mega Man ?</h3>
+                </div>
+                <img class="block-image" src="img/megaMan.jpg" alt="une image de Mega Man">
+                <div class="block-response" id="responseBtn4">
+                    <button class="blue wrong">Fastman</button>
+                    <button class="green wrong">Atomic Man</button>
+                    <button class="red rigth">Rock Man</button>
+                    <button class="yellow wrong">Demolition Man</button>
+                </div>
+                <div id="g4" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#question5"><button>NEXT</button></a>
+                </div>
+                <div id="w4" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question5"><button>NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question5">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 5:</h2>
+                    <h3>Sur quelle console Sonic a-t-il débuté ?</h3>
+                </div>
+                <img class="block-image" src="img/sonic01.jpg" alt="une image du jeux Sonic">
+                <div class="block-response" id="responseBtn5">
+                    <button class="blue rigth">Mega Drive</button>
+                    <button class="green wrong">Master System</button>
+                    <button class="red wrong">Dreamcast</button>
+                    <button class="yellow wrong">Play station 4</button>
+                </div>
+                <div id="g5" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#question6"><button>NEXT</button></a>
+                </div>
+                <div id="w5" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question6"><button>NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question6">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 6:</h2>
+                    <h3>La série Street Fighter est éditée par ?</h3>
+                </div>
+                <img class="block-image" src="img/streetFighter.jpg" alt="une image du jeu streetFighter">
+                <div class="block-response" id="responseBtn6">
+                    <button class="blue wrong">Nampco</button>
+                    <button class="green rigth">Capcom</button>
+                    <button class="red wrong">SNK</button>
+                    <button class="yellow wrong">Squar Enix</button>
+                </div>
+                <div id="g6" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#question7"><button>NEXT</button></a>
+                </div>
+                <div id="w6" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question7"><button>NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question7">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 7:</h2>
+                    <h3>Que signifie NES ?</h3>
+                </div>
+                <img class="block-image" src="img/giphy.gif" alt="gif d'un point d'interrogation">
+                <div class="block-response" id="responseBtn7">
+                    <button class="blue wrong">Nerd Entertainment Studio</button>
+                    <button class="green wrong">New Entertainment Society</button>
+                    <button class="red wrong">Network Entertainment Sony</button>
+                    <button class="yellow rigth">Nintendo Entertainment System</button>
+                </div>
+                <div id="g7" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#question8"><button>NEXT</button></a>
+                </div>
+                <div id="w7" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question8"><button>NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question8">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 8:</h2>
+                    <h3>Au départ, comment se nommait le jeu Pac-man ?</h3>
+                </div>
+                <img class="block-image" src="img/pacman.jpg" alt="une image du jeu Pac-man">
+                <div class="block-response" id="responseBtn8">
+                    <button class="blue rigth">Puck Man</button>
+                    <button class="green wrong">Duck Man</button>
+                    <button class="red wrong">Paf Man</button>
+                    <button class="yellow wrong">Pat Man</button>
+                </div>
+                <div id="g8" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#question9"><button>NEXT</button></a>
+                </div>
+                <div id="w8" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question9"><button>NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question9">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 9:</h2>
+                    <h3>En quelle année est sorti Pong, l'un des premiers jeux vidéo d'arcade ?</h3>
+                </div>
+                <img class="block-image" src="img/pong.jpg" alt="une image du jeu Pong">
+                <div class="block-response" id="responseBtn9">
+                    <button class="blue wrong">1964</button>
+                    <button class="green wrong">1968</button>
+                    <button class="red rigth">1972</button>
+                    <button class="yellow wrong">1976</button>
+                </div>
+                <div id="g9" class="modalGood">
+                    <p>Bonne Reponse</p>
+                    <a href="#result"><button id="ends">FINISH</button></a>
+                </div>
+                <div id="w9" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#result"><button id="end">FINISH</button></a>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <div class="block-result" id="result">
+           <img id="marioGood" src="img/marioOK.png">
+           <img id="marioWrong" src="img/marioWrong.png">
+        <h2>Bravo tu as fini le Quizz!!!</h2>
+        <h2 id="showScore"></h2>
+        <h2>Récapitulatif des réponses :</h2>
+        <div class="questionAnswer">
+            <p>1. Dans quel jeu Mario apparait-il pour la première fois ?</p>
+            <p id="answerG1" class="player-answer-G"></p>
+            <p id="answerF1" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>2. Quel est le nom du Hero des jeux Zelda ?</p>
+            <p id="answerG2" class="player-answer-G"></p>
+            <p id="answerF2" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>3. Quel est le premier jeux du genre FPS ?</p>
+            <p id="answerG3" class="player-answer-G"></p>
+            <p id="answerF3" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>4. Quel est le nom japonais de Mega Man ?</p>
+            <p id="answerG4" class="player-answer-G"></p>
+            <p id="answerF4" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>5. Sur quelle console Sonic a-t-il débuté ?</p>
+            <p id="answerG5" class="player-answer-G"></p>
+            <p id="answerF5" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>6. La série Street Fighter est éditée par ?</p>
+            <p id="answerG6" class="player-answer-G"></p>
+            <p id="answerF6" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>7. Que signifie NES ?</p>
+            <p id="answerG7" class="player-answer-G"></p>
+            <p id="answerF7" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>8. Au départ, comment se nommait le jeu Pac-man ?</p>
+            <p id="answerG8" class="player-answer-G"></p>
+            <p id="answerF8" class="player-answer-F"></p>
+        </div>
+        <div class="questionAnswer">
+            <p>9. En quelle année est sorti Pong, l'un des premiers jeux vidéo d'arcade ?</p>
+            <p id="answerG9" class="player-answer-G"></p>
+            <p id="answerF9" class="player-answer-F"></p>
+        </div>
+        <a href="#replayGame"><i class="fas fa-angle-double-up">Rejouer</i></a>
+        <a href="javascript:window.location.reload()"><button id="resetGame">Remettre à zéro</button></a>
+
+    </div>
+    <section id="picturesGalerie">
+        <input id="mario1" type="button" value="afficher">
+        <input id="mario1bis" type="button" value="éclipser">
+        <label for="mario1">Mario 1</label>
+        <input id="mario2" type="button" value="afficher">
+        <input id="mario2bis" type="button" value="éclipser">
+        <label for="mario2">Mario 2</label>
+        <input id="mario3" type="button" value="afficher">
+        <input id="mario3bis" type="button" value="éclipser">
+        <label for="mario3">Mario 3</label>
+        <input id="mario4" type="button" value="afficher">
+        <input id="mario4bis" type="button" value="éclipser">
+        <label for="mario4">Mario 4</label>
+        <input id="mario5" type="button" value="afficher">
+        <input id="mario5bis" type="button" value="éclipser">
+        <label for="mario5">Mario 5</label>
+        <input id="mario6" type="button" value="afficher">
+        <input id="mario6bis" type="button" value="éclipser">
+        <label for="mario6">Mario 6</label>
+        <input id="mario7" type="button" value="afficher">
+        <input id="mario7bis" type="button" value="éclipser">
+        <label for="mario7">Mario 7</label>
+        <input id="mario8" type="button" value="afficher">
+        <input id="mario8bis" type="button" value="éclipser">
+        <label for="mario8">Mario 8</label>
+        <input id="mario9" type="button" value="afficher">
+        <input id="mario9bis" type="button" value="éclipser">
+        <label for="mario9">Mario 9</label>
+        <input id="mario10" type="button" value="afficher">
+        <input id="mario10bis" type="button" value="éclipser">
+        <label for="mario10">Mario 10</label>
+        <table>
+            <tr id="firstLine">
+                
+                <td id="image1"><img src="img/marioOK.png"></td>
+                <td id="image2"><img src="img/marioGood.png"></td>
+                <td id="image3"><img src="img/marioFace.png"></td>
+                <td id="image4"><img src="img/Untitled.png"></td>
+                <td id="image5"><img src="img/chompignon.png"></td>
+            </tr>
+            <tr id="secondeLine">
+                <td id="image6"><img src="img/tortueMario.png"></td>
+                <td id="image7"><img src="img/marioHend.png"></td> 
+                <td id="image8"><img src="img/marioWrong.png"></td>   
+                <td id="image9"><img src="img/SMR_Yoshi.png"></td>   
+                <td id="image10"><img src="img/marioTeam.png"></td>       
+            </tr>
+        </table>
+    </section>
+
+
+    <div id="contactUs" class="modal-container">
+        <div class="modal">
+
+            <h2>L'équipe du projet <br>Le Quiz du Grenier</h2><br>
+
+            <div>
+                <h3>Guillaume</h3><br>
+                <a class="info-contact" href="https://www.linkedin.com/in/guillaume-bento-aires-7623071a3/" title="lien profil Linkedin de Guillaume" target="_blank">
+                    <i class="fab fa-3x fa-linkedin"></i>
+                    <p>guillaume-bento-aires</p>
+                </a>
+                <div class="info-contact">
+                    <i class="fas fa-3x fa-envelope"></i>
+                    <p>guillaume9469@gmail.com</p>
+                </div>
+            </div>
+                
+            <br>
+            <h3>Justine</h3><br>
+            <a class="info-contact" href="https://www.linkedin.com/in/justinehell/" title="lien profil Linkedin de Justine" target="_blank">
+                <i class="fab fa-3x fa-linkedin"></i>
+                <p>justinehell</p>
+            </a>
+            <div class="info-contact">
+                <i class="fas fa-3x fa-envelope"></i>
+                <p>hell.justine@gmail.com</p>
+            </div>
+            <br>
+            <h3>Amine</h3><br>
+            <a class="info-contact" href="https://www.linkedin.com/in/stambouli-d%C3%A9veloppeur/" title="lien profil Linkedin d'Amine" target="_blank">
+                <i class="fab fa-3x fa-linkedin"></i>
+                <p>stambouli-développeur</p>
+            </a>
+            <div class="info-contact">
+                <i class="fas fa-3x fa-envelope"></i>
+                <p>aminestambouli00780@gmail.com</p>
+            </div>
+            <br>
+            <button id="hideWindows" onclick="inDisplay()">Fermez la fenêtre</button>          
+            
+        </div>
+    </div>   
+
+    <footer class="footerQuiz">
+        <div class="footer-info">
+            <a href="https://www.wildcodeschool.com/fr-FR" title="Site web de la wild" target="_blank">
+                <img src="img/Logo_Wild.png" alt="Logo de la Wild Code School">
+            </a>
+            <span>Made with ❤️ by the Wild Code School Student - May 2020</span>
+            <br>
+            <span>Justine Hell - Amine Stambouli - Guillaume Bento Aires</span>
+            <br>
+            <button class="Contact" id="buttonContactUs">Contactez nous</button>
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
