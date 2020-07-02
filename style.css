@@ -570,7 +570,27 @@ footer button:hover {
 #songOn:hover {
     cursor: pointer;
 }
+/*gift according to the number of points : */
 
+#animalImage img{
+    display: none;
+    margin : auto;
+    margin-top: 20px;
+}
+#badges{
+    text-align: center;
+}
+#butonAnimal{
+    box-shadow: 0px 0px 20px yellow,
+                inset 0px 0px 20px greenyellow,
+                0px 0px 60px blue,
+                inset 0px 0px 60px black;
+    color: white;
+    font-weight: bold;  
+    font-size: xx-large;  
+    border-radius: 5px;    
+    cursor: pointer;    
+}
 /* table picture of mario*/
 tr{
     display: flex;
