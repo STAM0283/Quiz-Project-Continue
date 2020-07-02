@@ -593,3 +593,24 @@ td{
 #mario10bis{
     display: none;
 }
+#picturesGalerie{
+    display: flex;
+    flex-wrap: wrap;
+}
+#picturesGalerie input{
+    width: 4%;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px #00ccff,
+                inset 0px 0px 20px #00ccff,
+                0px 0px 60px #ff00c8,
+                inset 0px 0px 60px #ff00c8;
+
+}
+#mario10, #mario10bis, #label10{
+    display: none;
+}

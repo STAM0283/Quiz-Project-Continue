@@ -234,13 +234,13 @@ input9.addEventListener("click", display => {
     mario9bis.style.display = "block";
     
 })
-input10.addEventListener("click", display => {
-    image10.style.display = "block";
-    input10.style.display = "none";
-    mario10bis.style.display = "block";
+// input10.addEventListener("click", display => {
+//     image10.style.display = "block";
+//     input10.style.display = "none";
+//     mario10bis.style.display = "block";
     
     
-})
+// })
 
 // cacher l'image : 
 
@@ -308,10 +308,10 @@ mario9bis.addEventListener("click", cacher => {
 
 
 })
-mario10bis.addEventListener("click", cacher => {
-    mario10bis.style.display = "none";
-    image10.style.display = "none";
-    input10.style.display = "block";
+// mario10bis.addEventListener("click", cacher => {
+//     mario10bis.style.display = "none";
+//     image10.style.display = "none";
+//     input10.style.display = "block";
 
 
-})
+// })
