@@ -234,13 +234,6 @@ input9.addEventListener("click", display => {
     mario9bis.style.display = "block";
     
 })
-// input10.addEventListener("click", display => {
-//     image10.style.display = "block";
-//     input10.style.display = "none";
-//     mario10bis.style.display = "block";
-    
-    
-// })
 
 // cacher l'image : 
 
@@ -308,13 +301,6 @@ mario9bis.addEventListener("click", cacher => {
 
 
 })
-// mario10bis.addEventListener("click", cacher => {
-//     mario10bis.style.display = "none";
-//     image10.style.display = "none";
-//     input10.style.display = "block";
-
-
-// })
 
 // profil animal :
 let profilDog = document.getElementById("profil1");
@@ -349,3 +335,18 @@ displayProfil.addEventListener("click", profilGame => {
     }
 
 })
+
+//Ajout d'heure et date actuelle : 
+
+ let picturediv = document.getElementById("picture1");
+
+function afficher(){
+    let date = new Date().toDateString();
+    let heure = new Date().toLocaleTimeString();
+    picturediv.innerHTML = ` aujourd'hui on est le ${date}, et l'heure actuelle c'est ${heure}`;
+    setInterval(afficher, 1000);
+    
+} 
+afficher()
+
+    

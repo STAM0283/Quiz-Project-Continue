@@ -597,9 +597,19 @@ tr{
 }
 table{
     text-align: center;
+    border: 2px solid white;
+    box-shadow: 0px 0px 20px yellow,
+                inset 0px 0px 20px greenyellow,
+                0px 0px 60px blue,
+                inset 0px 0px 60px black;
 }
 td{
+    border: 2px solid rgb(73, 251, 53);
     display: none;
+    box-shadow: 0px 0px 20px yellow,
+                inset 0px 0px 20px greenyellow,
+                0px 0px 60px blue,
+                inset 0px 0px 60px black;
 }
 #mario1bis,
 #mario2bis,
@@ -633,4 +643,59 @@ td{
 }
 #mario10, #mario10bis, #label10{
     display: none;
+}
+
+/* La galerie image en Grid : */
+#galerieImages{
+    display: none;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+#grid1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1 ;
+    grid-row-end: 2;
+
+}
+#grid2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+#grid2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+}
+#grid2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    
+}
+#grid2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+}
+#grid2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+#grid2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
 }
