@@ -534,10 +534,7 @@ footer button:hover {
 
 /* QUESTION DISPLAY NONE */
 #badges,
-.footerQuiz,
-#picturesGalerie input,
-#picturesGalerie label,
-#table,
+#picturesGalerie,
 #question1,
 #question2, 
 #question3,
@@ -654,7 +651,7 @@ td{
     display: flex;
     flex-wrap: wrap;
 }
-#picturesGalerie input{
+#picturesGalerie button{
     width: 4%;
     height: 20px;
     cursor: pointer;

@@ -13,6 +13,7 @@
     <img id="songOn" src="img/volumOn.svg" alt="icon pour desactiver le son">
     <img id="songOff" src="img/volumOff.svg" alt="icon pour activer le son">
     <input id="inputTimer" value="00:00:00">
+    
     <p id="counter"></p>
 </div>
 <audio id = "marioSong"src="sounds/Super Mario Bros.mp3" loop></audio>
@@ -362,61 +363,17 @@
 
         </section>
     </main>
+
     <div class="block-result" id="result">
            <img id="marioGood" src="img/marioOK.png">
            <img id="marioWrong" src="img/marioWrong.png">
         <h2>Bravo tu as fini le Quizz!!!</h2>
         <h2 id="showScore"></h2>
         <h2>Récapitulatif des réponses :</h2>
-        <div class="questionAnswer">
-            <p>1. Dans quel jeu Mario apparait-il pour la première fois ?</p>
-            <p id="answerG1" class="player-answer-G"></p>
-            <p id="answerF1" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>2. Quel est le nom du Hero des jeux Zelda ?</p>
-            <p id="answerG2" class="player-answer-G"></p>
-            <p id="answerF2" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>3. Quel est le premier jeux du genre FPS ?</p>
-            <p id="answerG3" class="player-answer-G"></p>
-            <p id="answerF3" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>4. Quel est le nom japonais de Mega Man ?</p>
-            <p id="answerG4" class="player-answer-G"></p>
-            <p id="answerF4" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>5. Sur quelle console Sonic a-t-il débuté ?</p>
-            <p id="answerG5" class="player-answer-G"></p>
-            <p id="answerF5" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>6. La série Street Fighter est éditée par ?</p>
-            <p id="answerG6" class="player-answer-G"></p>
-            <p id="answerF6" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>7. Que signifie NES ?</p>
-            <p id="answerG7" class="player-answer-G"></p>
-            <p id="answerF7" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>8. Au départ, comment se nommait le jeu Pac-man ?</p>
-            <p id="answerG8" class="player-answer-G"></p>
-            <p id="answerF8" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>9. En quelle année est sorti Pong, l'un des premiers jeux vidéo d'arcade ?</p>
-            <p id="answerG9" class="player-answer-G"></p>
-            <p id="answerF9" class="player-answer-F"></p>
-        </div>
         <a href="#replayGame"><i class="fas fa-angle-double-up">Rejouer</i></a>
         <a href="javascript:window.location.reload()"><button id="resetGame">Remettre à zéro</button></a>
-
     </div>
+
     <div id="badges">
         <h3 id="gifts">Quel annimal vous ressemble sur Quiz(selon le nombre de points)</h3>
         <button id="butonAnimal">Voir ton prifil animal</button>
@@ -430,33 +387,26 @@
         </div>
     </div>
     <section id="picturesGalerie">
-        <input id="mario1" type="button" value="afficher">
-        <input id="mario1bis" type="button" value="éclipser">
-        <label for="mario1">Mario 1</label>
-        <input id="mario2" type="button" value="afficher">
-        <input id="mario2bis" type="button" value="éclipser">
-        <label for="mario2">Mario 2</label>
-        <input id="mario3" type="button" value="afficher">
-        <input id="mario3bis" type="button" value="éclipser">
-        <label for="mario3">Mario 3</label>
-        <input id="mario4" type="button" value="afficher">
-        <input id="mario4bis" type="button" value="éclipser">
-        <label for="mario4">Mario 4</label>
-        <input id="mario5" type="button" value="afficher">
-        <input id="mario5bis" type="button" value="éclipser">
-        <label for="mario5">Mario 5</label>
-        <input id="mario6" type="button" value="afficher">
-        <input id="mario6bis" type="button" value="éclipser">
-        <label for="mario6">Mario 6</label>
-        <input id="mario7" type="button" value="afficher">
-        <input id="mario7bis" type="button" value="éclipser">
-        <label for="mario7">Mario 7</label>
-        <input id="mario8" type="button" value="afficher">
-        <input id="mario8bis" type="button" value="éclipser">
-        <label for="mario8">Mario 8</label>
-        <input id="mario9" type="button" value="afficher">
-        <input id="mario9bis" type="button" value="éclipser">
-        <label for="mario9">Mario 9</label>
+        <button id="mario1">afficher</button>
+        <button id="mario1bis">éclipser</button>
+        <button id="mario2">afficher</button>
+        <button id="mario2bis">éclipser</button>
+        <button id="mario3">afficher</button>
+        <button id="mario3bis">éclipser</button>
+        <button id="mario4">afficher</button>
+        <button id="mario4bis">éclipser</button>
+        <button id="mario5">afficher</button>
+        <button id="mario5bis">éclipser</button>
+
+        <button id="mario6">afficher</button>
+        <button id="mario6bis">éclipser</button>
+        <button id="mario7">afficher</button>
+        <button id="mario7bis">éclipser</button>
+        <button id="mario8">afficher</button>
+        <button id="mario8bis">éclipser</button>
+        <button id="mario9">afficher</button>
+        <button id="mario9bis">éclipser</button>
+
         <table id="table">
             <tr id="firstLine">
                 
