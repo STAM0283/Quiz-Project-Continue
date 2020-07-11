@@ -15,9 +15,9 @@ body{
     margin : 0;
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
-    color : #e27af5;
+    color : #FFFAF0;
     background-color: #01000d;
-    background-image: url("img/brick-wall-dark.png");
+    background-image: url("img/wall-body.png");
 }
 html {
     scroll-behavior: smooth;
@@ -35,8 +35,9 @@ section {
     min-height: 100vh;
     min-width: 320px;
     padding: 5%;
-    display: flex;
+    display: none;
     flex-direction: column;
+    text-align: center;
 }
 
 h1, h2 {
@@ -61,7 +62,14 @@ a {
 }
 .start-link a {
     padding-right: 10px;
+    
 }
+.start-link{
+    position: absolute;
+    left: 40%;
+    display: block;
+}
+
 
 /* CSS Introduction */
 .block-introduction {
@@ -194,6 +202,7 @@ a {
 /*MODAL RESPONSE*/
 
 .modalGood {
+    position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -205,7 +214,8 @@ a {
     border: 2px solid #04e351;
     box-shadow: 0 0 20px #04e351;
 }
-.modalWrong {
+.modalWrong{
+    position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -218,8 +228,19 @@ a {
     border: 2px solid #f72747;
     box-shadow: 0 0 20px #f72747;
 }
-.modalGood p, .modalWrong p {
+#nextQuestionA_2, #nextQuestionB_2, #nextQuestionC_2, #nextQuestionD_2, #nextQuestionA_3,
+ #nextQuestionB_3, #nextQuestionC_3, #nextQuestionD_3, #nextQuestionA_4, #nextQuestionB_4, 
+ #nextQuestionC_4, #nextQuestionD_4, #nextQuestionA_5, #nextQuestionB_5, 
+ #nextQuestionC_5, #nextQuestionD_5,#nextQuestionA_6, #nextQuestionB_6, 
+ #nextQuestionC_6, #nextQuestionD_6, #nextQuestionA_7, #nextQuestionB_7, 
+ #nextQuestionC_7, #nextQuestionD_7 {
+   margin-left: 100%;
+};
+
+.modalGood p{
     font-size: 1.2em;
+    text-align: center;
+    color: blue;
 }
 .modalGood a, .modalWrong a {
     display: flex;
@@ -243,6 +264,7 @@ a {
 
 /* CSS Result */
 .block-result {
+    display: none;
     margin: auto;
     margin-bottom: 5%;
     width: 90%;
@@ -511,7 +533,12 @@ footer button:hover {
 }
 
 /* QUESTION DISPLAY NONE */
-
+#badges,
+.footerQuiz,
+#picturesGalerie input,
+#picturesGalerie label,
+#table,
+#question1,
 #question2, 
 #question3,
 #question4,

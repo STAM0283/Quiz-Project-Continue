@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/3732c215c0.js" crossorigin="anonymous"></script>
     <title>Le Quizz du Grenier</title>
 </head>
+<body>
 <div class="counterBox">
     <img id="songOn" src="img/volumOn.svg" alt="icon pour desactiver le son">
     <img id="songOff" src="img/volumOff.svg" alt="icon pour activer le son">
@@ -17,20 +18,19 @@
 <audio id = "marioSong"src="sounds/Super Mario Bros.mp3" loop></audio>
 
     <header> 
-        <div id="picture1"></div><body>
-        <h1 id="replayGame">Le Quizz du Grenier</h1>
+        <div id="time"></div><body>
+        <h1 id="replayGame">Le Quizz des Gamers</h1>
         <img src="img/retrogamingResize.jpg" alt="une image de jeux d'arcades retro">
-        <a href="#introduction">Next</a>
+        <a href="#introduction"><p id="introNext">Next</p></a>
     </header>
 
     <div id="introduction">
 
         <div class="block-introduction">
 
-            <p>Bonjour et bienvenue sur le Quizz du Grenier !<br><br>
-                Ce jeu vous est présenté par la Wild Code School, promotion de Lyon (Mai 2020).<br>
-                Le but de ce jeu est simple, nous allons tester tes connaissances en jeux vidéos rétro.
-                Sauras-tu atteindre la note maximale et rejoindre l'élite des G@m3rs aux côtés du Joueur du Grenier?<br><br> 
+            <p>Bonjour et bienvenue sur le Quizz des Gamers !<br><br><br>
+                Le but de ce jeu est simple, nous allons tester tes connaissances en jeux vidéos.
+                Sauras-tu atteindre la note maximale et rejoindre l'élite des <strong style="color: chartreuse;">G@m3rs ?</strong><br><br> 
                 Réponse tout de suite en répondant aux questions de notre quizz spécial retrogaming.
                 En cas d'erreur, les bonnes réponses ainsi que le résultat seront dévoilés à la fin du quizz pour un suspens insoutenable.<br>
                 <br>
@@ -39,8 +39,7 @@
 
             <a href="#question1">
                 <div class="start-link">
-                    <p>Start Game</p>
-                    <i class="fas fa-angle-double-down"></i>
+                    <p style="font-size: xx-large" style="color: crimson;">Start Game</p>
                 </div>
             </a>
 
@@ -56,25 +55,33 @@
                 </div>
                 <img class="block-image" src="img/mario03.jpg" alt="une image du jeu mario">
                 <div class="block-response" id="responseBtn1">
-                    <button class="blue rigth">Donkey Kong Jr.</button>
-                    <button class="green wrong">Mario Bros.</button>
-                    <button class="red wrong">Mario Kart</button>
-                    <button class="yellow wrong">Super Mario</button>
+                    <button id ="blue-rigth1" class="blue">Donkey Kong Jr.</button>
+                    <button id ="green-wrong1" class="red">Mario Bros.</button>
+                    <button id ="red-wrong1" class="green">Mario Kart</button>
+                    <button id ="yellow-wrong1" class="yellow">Super Mario</button>
                     <audio id = "goodSong" src="sounds/goodAnswer.mp3"></audio>
                     <audio id = "wrongSong" src="sounds/wrongAnswer.mp3"></audio>
                 </div>
-                <div id="g1" class="modalGood">
-                    <p>Bonne Reponse</p>
-                    <a href="#question2"><button>NEXT</button></a>
+                <div id="modalGood1" class="modalGood">
+                    <p>Bravo !, ça commence plutôt pas mal, continues sur cette lancée</p>
+                    <a href="#question2"><button id ="nextQuestionA_2">NEXT</button></a>
                 </div>
-                <div id="w1" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
-                    <a href="#question2"><button>NEXT</button></a>
+                <div id="modalWrongA_1" class="modalWrong">
+                    <p>Oups Mauvaise Reponse : tentes ta chance à la Question suivante</p>
+                    <a href="#question2"><button id = "nextQuestionB_2">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_1" class="modalWrong">
+                    <p>Mauvaise Reponse, se n'est pas grave, c'est que la première question</p>
+                    <a href="#question2"><button id = "nextQuestionC_2">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_1" class="modalWrong">
+                    <p>Mauvaise Reponse, </p>
+                    <a href="#question2"><button id = "nextQuestionD_2">NEXT</button></a>
                 </div>
             </div>
 
         </section>
-        <section id='question2'>
+        <section id="question2">
 
             <div class="block-question">
 
@@ -84,18 +91,26 @@
                 </div>
                 <img class="block-image" src="img/zelda03.png" alt="une image du jeu zelda">
                 <div class="block-response" id="responseBtn2">
-                    <button class="blue wrong">Peach</button>
-                    <button class="green wrong">Duke</button>
-                    <button class="red wrong">Zelda</button>
-                    <button class="yellow rigth">Link</button>
+                    <button id ="blue-wrong2" class="blue">Peach</button>
+                    <button id ="green-wrong2" class="red">Duke</button>
+                    <button id ="red-wrong2" class="green">Zelda</button>
+                    <button id ="yellow-rigth2" class="yellow">Link</button>
                 </div>
-                <div id="g2" class="modalGood">
-                    <p>Bonne Reponse</p>
-                    <a href="#question3"><button>NEXT</button></a>
+                <div id="modalGood2" class="modalGood">
+                    <p>Bonne Reponse : La première apparition de Link date de 1986 dans le jeu The Legend of Zelda</p>
+                    <a href="#question3"><button id = "nextQuestionA_3">NEXT</button></a>
                 </div>
-                <div id="w2" class="modalWrong">
+                <div id="modalWrongA_2" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question3"><button>NEXT</button></a>
+                    <a href="#question3"><button id = "nextQuestionB_3">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_2" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question3"><button id = "nextQuestionC_3">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_2" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question3"><button id = "nextQuestionD_3">NEXT</button></a>
                 </div>
 
             </div>
@@ -111,18 +126,26 @@
             </div>
             <img class="block-image" src="img/wolfenstein02.png" alt="une image du jeu wolfenstein">
             <div class="block-response" id="responseBtn3">
-                <button class="blue wrong">Call of Duty</button>
-                <button class="green wrong">Medal of Honor</button>
-                <button class="red rigth">Wolfenstein 3D</button>
-                <button class="yellow wrong">DOOM</button>
+                <button id="blue-wrong3" class="blue">Call of Duty</button>
+                <button id="green-wrong3" class="red">Medal of Honor</button>
+                <button id="red-rigth3" class="green">Wolfenstein 3D</button>
+                <button id="yellow-wrong3" class="yellow">DOOM</button>
             </div>
-            <div id="g3" class="modalGood">
+            <div id="modalGood3" class="modalGood">
                 <p>Bonne Reponse</p>
-                <a href="#question4"><button>NEXT</button></a>
+                <a href="#question4"><button id = "nextQuestionA_4">NEXT</button></a>
             </div>
-            <div id="w3" class="modalWrong">
+            <div id="modalWrongA_3" class="modalWrong">
                 <p>Mauvaise Reponse</p>
-                <a href="#question4"><button>NEXT</button></a>
+                <a href="#question4"><button id = "nextQuestionB_4">NEXT</button></a>
+            </div>
+            <div id="modalWrongB_3" class="modalWrong">
+                <p>Mauvaise Reponse</p>
+                <a href="#question4"><button id = "nextQuestionC_4">NEXT</button></a>
+            </div>
+            <div id="modalWrongC_3" class="modalWrong">
+                <p>Mauvaise Reponse</p>
+                <a href="#question4"><button id = "nextQuestionD_4">NEXT</button></a>
             </div>
 
         </div>
@@ -138,18 +161,26 @@
                 </div>
                 <img class="block-image" src="img/megaMan.jpg" alt="une image de Mega Man">
                 <div class="block-response" id="responseBtn4">
-                    <button class="blue wrong">Fastman</button>
-                    <button class="green wrong">Atomic Man</button>
-                    <button class="red rigth">Rock Man</button>
-                    <button class="yellow wrong">Demolition Man</button>
+                    <button id ="blue-wrong4" class="blue">Fastman</button>
+                    <button id ="green-wrong4" class="green">Atomic Man</button>
+                    <button id ="red-rigth4" class="red">Rock Man</button>
+                    <button id ="yellow-wrong4" class="yellow">Demolition Man</button>
                 </div>
-                <div id="g4" class="modalGood">
+                <div id="modalGood4" class="modalGood">
                     <p>Bonne Reponse</p>
-                    <a href="#question5"><button>NEXT</button></a>
+                    <a href="#question5"><button id = "nextQuestionA_5">NEXT</button></a>
                 </div>
-                <div id="w4" class="modalWrong">
+                <div id="modalWrongA_4" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question5"><button>NEXT</button></a>
+                    <a href="#question5"><button id = "nextQuestionB_5">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_4" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question5"><button id = "nextQuestionC_5">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_4" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question5"><button id = "nextQuestionD_5">NEXT</button></a>
                 </div>
 
             </div>
@@ -165,18 +196,26 @@
                 </div>
                 <img class="block-image" src="img/sonic01.jpg" alt="une image du jeux Sonic">
                 <div class="block-response" id="responseBtn5">
-                    <button class="blue rigth">Mega Drive</button>
-                    <button class="green wrong">Master System</button>
-                    <button class="red wrong">Dreamcast</button>
-                    <button class="yellow wrong">Play station 4</button>
+                    <button id ="blue-rigth5" class="blue">Mega Drive</button>
+                    <button id ="green-wrong5" class="green">Master System</button>
+                    <button id ="red-wrong5" class="red">Dreamcast</button>
+                    <button id ="yellow-wrong5" class="yellow">Play station 4</button>
                 </div>
-                <div id="g5" class="modalGood">
+                <div id="modalGood5" class="modalGood">
                     <p>Bonne Reponse</p>
-                    <a href="#question6"><button>NEXT</button></a>
+                    <a href="#question6"><button id = "nextQuestionA_6">NEXT</button></a>
                 </div>
-                <div id="w5" class="modalWrong">
+                <div id="modalWrongA_5" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question6"><button>NEXT</button></a>
+                    <a href="#question6"><button id = "nextQuestionB_6">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_5" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question6"><button id = "nextQuestionC_6">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_5" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question6"><button id = "nextQuestionD_6">NEXT</button></a>
                 </div>
 
             </div>
@@ -192,18 +231,26 @@
                 </div>
                 <img class="block-image" src="img/streetFighter.jpg" alt="une image du jeu streetFighter">
                 <div class="block-response" id="responseBtn6">
-                    <button class="blue wrong">Nampco</button>
-                    <button class="green rigth">Capcom</button>
-                    <button class="red wrong">SNK</button>
-                    <button class="yellow wrong">Squar Enix</button>
+                    <button id ="blue-wrong6" class="blue">Nampco</button>
+                    <button id ="green-rigth6" class="green">Capcom</button>
+                    <button id ="red-wrong6" class="red">SNK</button>
+                    <button id ="yellow-wrong6" class="yellow">Squar Enix</button>
                 </div>
-                <div id="g6" class="modalGood">
+                <div id="modalGood6" class="modalGood">
                     <p>Bonne Reponse</p>
-                    <a href="#question7"><button>NEXT</button></a>
+                    <a href="#question7"><button id = "nextQuestionA_7">NEXT</button></a>
                 </div>
-                <div id="w6" class="modalWrong">
+                <div id="modalWrongA_6" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question7"><button>NEXT</button></a>
+                    <a href="#question7"><button id = "nextQuestionB_7">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_6" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question7"><button id = "nextQuestionC_7">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_6" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question7"><button id = "nextQuestionD_7">NEXT</button></a>
                 </div>
 
             </div>
@@ -219,18 +266,26 @@
                 </div>
                 <img class="block-image" src="img/giphy.gif" alt="gif d'un point d'interrogation">
                 <div class="block-response" id="responseBtn7">
-                    <button class="blue wrong">Nerd Entertainment Studio</button>
-                    <button class="green wrong">New Entertainment Society</button>
-                    <button class="red wrong">Network Entertainment Sony</button>
-                    <button class="yellow rigth">Nintendo Entertainment System</button>
+                    <button id ="blue-wrong7" class ="blue">Nerd Entertainment Studio</button>
+                    <button id ="green-wrong7" class="red">New Entertainment Society</button>
+                    <button id ="red-wrong7" class="green">Network Entertainment Sony</button>
+                    <button id ="yellow-rigth7" class="yellow">Nintendo Entertainment System</button>
                 </div>
-                <div id="g7" class="modalGood">
+                <div id="modalGood7" class="modalGood">
                     <p>Bonne Reponse</p>
-                    <a href="#question8"><button>NEXT</button></a>
+                    <a href="#question8"><button id = "nextQuestionA_8">NEXT</button></a>
                 </div>
-                <div id="w7" class="modalWrong">
+                <div id="modalWrongA_7" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question8"><button>NEXT</button></a>
+                    <a href="#question8"><button id = "nextQuestionB_8">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_7" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question8"><button id = "nextQuestionC_8">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_7" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question8"><button id = "nextQuestionD_8">NEXT</button></a>
                 </div>
 
             </div>
@@ -246,18 +301,26 @@
                 </div>
                 <img class="block-image" src="img/pacman.jpg" alt="une image du jeu Pac-man">
                 <div class="block-response" id="responseBtn8">
-                    <button class="blue rigth">Puck Man</button>
-                    <button class="green wrong">Duck Man</button>
-                    <button class="red wrong">Paf Man</button>
-                    <button class="yellow wrong">Pat Man</button>
+                    <button id ="blue-rigth8">Puck Man</button>
+                    <button id ="green-wrong8">Duck Man</button>
+                    <button id ="red-wrong8">Paf Man</button>
+                    <button id ="yellow-wrong8">Pat Man</button>
                 </div>
-                <div id="g8" class="modalGood">
+                <div id="modalGood8" class="modalGood">
                     <p>Bonne Reponse</p>
-                    <a href="#question9"><button>NEXT</button></a>
+                    <a href="#question9"><button id = "nextQuestionA_9">NEXT</button></a>
                 </div>
-                <div id="w8" class="modalWrong">
+                <div id="modalWrongA_8" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question9"><button>NEXT</button></a>
+                    <a href="#question9"><button id = "nextQuestionB_9">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_8" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question9"><button id = "nextQuestionC_9">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_8" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question9"><button id = "nextQuestionD_9">NEXT</button></a>
                 </div>
 
             </div>
@@ -273,18 +336,26 @@
                 </div>
                 <img class="block-image" src="img/pong.jpg" alt="une image du jeu Pong">
                 <div class="block-response" id="responseBtn9">
-                    <button class="blue wrong">1964</button>
-                    <button class="green wrong">1968</button>
-                    <button class="red rigth">1972</button>
-                    <button class="yellow wrong">1976</button>
+                    <button id ="blue-wrong9">1964</button>
+                    <button id ="green-wrong9">1968</button>
+                    <button id ="red-rigth9">1972</button>
+                    <button id ="yellow-wrong9">1976</button>
                 </div>
-                <div id="g9" class="modalGood">
+                <div id="modalGood9" class="modalGood">
                     <p>Bonne Reponse</p>
-                    <a href="#result"><button id="ends">FINISH</button></a>
+                    <a href="#question9"><button id = "nextQuestionA_9">NEXT</button></a>
                 </div>
-                <div id="w9" class="modalWrong">
+                <div id="modalWrongA_9" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#result"><button id="end">FINISH</button></a>
+                    <a href="#question9"><button id = "nextQuestionB_9">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_9" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question9"><button id = "nextQuestionC_9">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_9" class="modalWrong">
+                    <p>Mauvaise Reponse</p>
+                    <a href="#question9"><button id = "nextQuestionD_9">NEXT</button></a>
                 </div>
 
             </div>
@@ -386,10 +457,7 @@
         <input id="mario9" type="button" value="afficher">
         <input id="mario9bis" type="button" value="éclipser">
         <label for="mario9">Mario 9</label>
-        <input id="mario10" type="button" value="afficher">
-        <input id="mario10bis" type="button" value="éclipser">
-        <label for="mario10" id="label10">Mario 10</label>
-        <table>
+        <table id="table">
             <tr id="firstLine">
                 
                 <td id="image1"><img src="img/marioOK.png"></td>
@@ -406,16 +474,6 @@
                 <td id="image10"><img src="img/marioTeam.png"></td>       
             </tr>
         </table>
-    </section>
-
-    <section id="galerieImages">
-        <div id="grid1"><img src="img/marioTeam.png"></div>
-        <div id="grid2"><img src="img/master-sword.png"></div>
-        <div id="grid3"><img src="img/luigi.jpg"></div>
-        <div id="grid4"><img src="img/mario.png"></div>
-        <div id="grid5"><img src="img/video-game-.png"></div>
-        <div id="grid6"><img src="img/kitana.png"></div>
-        <div id="grid7"><img src="img/ZelaGame.jpg"></div>
     </section>
     <div id="contactUs" class="modal-container">
         <div class="modal">
