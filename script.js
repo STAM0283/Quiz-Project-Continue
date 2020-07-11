@@ -466,6 +466,97 @@ nextQuestionD_8.addEventListener("click", nextD_8 => {
     question8.style.display = "block";
     });
    
+//declaration de variable pour la huitieme question : 
+
+let buttonGood8 = document.getElementById("blue-rigth8");
+let buttonWrongA_8    = document.getElementById("yellow-wrong8");
+let buttonWrongB_8 = document.getElementById("green-wrong8");
+let buttonWrongC_8 = document.getElementById("red-wrong8");
+
+
+let modalGood8     = document.getElementById("modalGood8");
+let modalWrongA_8  = document.getElementById("modalWrongA_8");
+let modalWrongB_8  = document.getElementById("modalWrongB_8");
+let modalWrongC_8  = document.getElementById("modalWrongC_8");
+
+// les fonctions pour la huitieme question : 
+
+buttonGood8.addEventListener("click", eventGood8 => {
+    modalGood8.style.display = "block";
+    goodSong.play();
+    counters.innerHTML   = ++counter; 
+
+})
+buttonWrongA_8.addEventListener("click", eventWrong8_1 => {
+    modalWrongA_8.style.display = "block";
+    wrongSong.play();
+});
+buttonWrongB_8.addEventListener("click", eventWrong8_2 => {
+    modalWrongB_8.style.display = "block";
+    wrongSong.play();
+});
+
+buttonWrongC_8.addEventListener("click", eventWrong8_3 => {
+    modalWrongC_8.style.display = "block";
+    wrongSong.play();
+});
+
+
+// Button next question9 : 
+
+let question9 = document.getElementById("question9");
+let nextQuestionA_9 = document.getElementById("nextQuestionA_9");
+let nextQuestionB_9 = document.getElementById("nextQuestionB_9");
+let nextQuestionC_9 = document.getElementById("nextQuestionC_9");
+let nextQuestionD_9 = document.getElementById("nextQuestionD_9");
+
+nextQuestionA_9.addEventListener("click", nextA_9 => {   
+    question9.style.display = "block";
+});
+nextQuestionB_9.addEventListener("click", nextB_9 => {   
+    question9.style.display = "block";
+    });
+nextQuestionC_9.addEventListener("click", nextC_9 => {   
+    question9.style.display = "block";
+    });
+nextQuestionD_9.addEventListener("click", nextD_9 => {   
+    question9.style.display = "block";
+    });
+   
+//declaration de variable pour la neuvieme question : 
+
+let buttonGood9 = document.getElementById("red-rigth9");
+let buttonWrongA_9    = document.getElementById("yellow-wrong9");
+let buttonWrongB_9 = document.getElementById("green-wrong9");
+let buttonWrongC_9 = document.getElementById("blue-wrong9");
+
+
+let modalGood9     = document.getElementById("modalGood9");
+let modalWrongA_9  = document.getElementById("modalWrongA_9");
+let modalWrongB_9  = document.getElementById("modalWrongB_9");
+let modalWrongC_9  = document.getElementById("modalWrongC_9");
+
+// les fonctions pour la neuvieme question : 
+
+buttonGood9.addEventListener("click", eventGood9 => {
+    modalGood9.style.display = "block";
+    goodSong.play();
+    counters.innerHTML   = ++counter; 
+
+})
+buttonWrongA_9.addEventListener("click", eventWrong9_1 => {
+    modalWrongA_9.style.display = "block";
+    wrongSong.play();
+});
+buttonWrongB_9.addEventListener("click", eventWrong9_2 => {
+    modalWrongB_9.style.display = "block";
+    wrongSong.play();
+});
+
+buttonWrongC_9.addEventListener("click", eventWrong9_3 => {
+    modalWrongC_9.style.display = "block";
+    wrongSong.play();
+});
 
 
 
