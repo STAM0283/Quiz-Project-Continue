@@ -13,6 +13,7 @@
     <img id="songOn" src="img/volumOn.svg" alt="icon pour desactiver le son">
     <img id="songOff" src="img/volumOff.svg" alt="icon pour activer le son">
     <input id="inputTimer" value="00:00:00">
+    
     <p id="counter"></p>
 </div>
 <audio id = "marioSong"src="sounds/Super Mario Bros.mp3" loop></audio>
@@ -21,27 +22,45 @@
         <div id="time"></div><body>
         <h1 id="replayGame">Le Quizz des Gamers</h1>
         <img src="img/retrogamingResize.jpg" alt="une image de jeux d'arcades retro">
-        <a href="#introduction"><p id="introNext">Next</p></a>
+
+        <div>
+            <label for="black">Fond noir</label>
+            <input id="black" type="radio" name="color" value="colors1">
+            <label for="pink">Fond Rose</label>
+            <input id="pink" type="radio" name="color" value="colors3">
+            <label for="blue">Fond bleu</label>
+            <input id="blue" type="radio" name="color" value="colors2"><br><br>
+            <label for="name">Prénom</label>
+            <input id="name" type="text">
+            <label for="age">Age</label>
+            <input id="age" type="number">
+            
+            
+            <button id="validateName">Valider</button>
+            
+            <a href="#introduction"><p id="introNext">Next</p></a>
+        </div>
     </header>
 
     <div id="introduction">
 
         <div class="block-introduction">
 
-            <p>Bonjour et bienvenue sur le Quizz des Gamers !<br><br><br>
+            <p>Bonjour <p id="nameVariable" style="color: crimson;" style="font-size: xx-large;"></p>et bienvenue sur le Quizz des Gamers !<br>
                 Le but de ce jeu est simple, nous allons tester tes connaissances en jeux vidéos.
-                Sauras-tu atteindre la note maximale et rejoindre l'élite des <strong style="color: chartreuse;">G@m3rs ?</strong><br><br> 
+                Sauras-tu atteindre la note maximale et rejoindre l'élite des <strong style="color: chartreuse;" style="font-size: xx-large">--G@m3rs ?--</strong><br>
                 Réponse tout de suite en répondant aux questions de notre quizz spécial retrogaming.
-                En cas d'erreur, les bonnes réponses ainsi que le résultat seront dévoilés à la fin du quizz pour un suspens insoutenable.<br>
+                En cas d'erreur, les bonnes réponses ainsi que le résultat seront dévoilés à la fin du quizz pour un suspens insoutenable.
                 <br>
                 GLHF !
-            </p>
-
             <a href="#question1">
                 <div class="start-link">
                     <p style="font-size: xx-large" style="color: crimson;">Start Game</p>
                 </div>
-            </a>
+            </a>    
+            </p>
+
+            
 
         </div>
     </div>
@@ -301,10 +320,10 @@
                 </div>
                 <img class="block-image" src="img/pacman.jpg" alt="une image du jeu Pac-man">
                 <div class="block-response" id="responseBtn8">
-                    <button id ="blue-rigth8">Puck Man</button>
-                    <button id ="green-wrong8">Duck Man</button>
-                    <button id ="red-wrong8">Paf Man</button>
-                    <button id ="yellow-wrong8">Pat Man</button>
+                    <button id ="blue-rigth8" class="blue">Puck Man</button>
+                    <button id ="green-wrong8" class="red">Duck Man</button>
+                    <button id ="red-wrong8" class="green">Paf Man</button>
+                    <button id ="yellow-wrong8" class="yellow">Pat Man</button>
                 </div>
                 <div id="modalGood8" class="modalGood">
                     <p>Bonne Reponse</p>
@@ -336,87 +355,43 @@
                 </div>
                 <img class="block-image" src="img/pong.jpg" alt="une image du jeu Pong">
                 <div class="block-response" id="responseBtn9">
-                    <button id ="blue-wrong9">1964</button>
-                    <button id ="green-wrong9">1968</button>
-                    <button id ="red-rigth9">1972</button>
-                    <button id ="yellow-wrong9">1976</button>
+                    <button id ="blue-wrong9" class="blue">1964</button>
+                    <button id ="green-wrong9" class="red">1968</button>
+                    <button id ="red-rigth9" class="green">1972</button>
+                    <button id ="yellow-wrong9" class="yellow">1976</button>
                 </div>
                 <div id="modalGood9" class="modalGood">
                     <p>Bonne Reponse</p>
-                    <a href="#question9"><button id = "nextQuestionA_9">NEXT</button></a>
+                    <a href="#result"><button id = "nextResultA">Voir les résultats</button></a>
                 </div>
                 <div id="modalWrongA_9" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question9"><button id = "nextQuestionB_9">NEXT</button></a>
+                    <a href="#result"><button id = "nextResultB">Voir les résultats</button></a>
                 </div>
                 <div id="modalWrongB_9" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question9"><button id = "nextQuestionC_9">NEXT</button></a>
+                    <a href="#result"><button id = "nextResultC">Voir les résultats</button></a>
                 </div>
                 <div id="modalWrongC_9" class="modalWrong">
                     <p>Mauvaise Reponse</p>
-                    <a href="#question9"><button id = "nextQuestionD_9">NEXT</button></a>
+                    <a href="#result"><button id = "nextResultD">Voir les résultats</button></a>
                 </div>
 
             </div>
 
         </section>
     </main>
+
     <div class="block-result" id="result">
            <img id="marioGood" src="img/marioOK.png">
            <img id="marioWrong" src="img/marioWrong.png">
         <h2>Bravo tu as fini le Quizz!!!</h2>
         <h2 id="showScore"></h2>
         <h2>Récapitulatif des réponses :</h2>
-        <div class="questionAnswer">
-            <p>1. Dans quel jeu Mario apparait-il pour la première fois ?</p>
-            <p id="answerG1" class="player-answer-G"></p>
-            <p id="answerF1" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>2. Quel est le nom du Hero des jeux Zelda ?</p>
-            <p id="answerG2" class="player-answer-G"></p>
-            <p id="answerF2" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>3. Quel est le premier jeux du genre FPS ?</p>
-            <p id="answerG3" class="player-answer-G"></p>
-            <p id="answerF3" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>4. Quel est le nom japonais de Mega Man ?</p>
-            <p id="answerG4" class="player-answer-G"></p>
-            <p id="answerF4" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>5. Sur quelle console Sonic a-t-il débuté ?</p>
-            <p id="answerG5" class="player-answer-G"></p>
-            <p id="answerF5" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>6. La série Street Fighter est éditée par ?</p>
-            <p id="answerG6" class="player-answer-G"></p>
-            <p id="answerF6" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>7. Que signifie NES ?</p>
-            <p id="answerG7" class="player-answer-G"></p>
-            <p id="answerF7" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>8. Au départ, comment se nommait le jeu Pac-man ?</p>
-            <p id="answerG8" class="player-answer-G"></p>
-            <p id="answerF8" class="player-answer-F"></p>
-        </div>
-        <div class="questionAnswer">
-            <p>9. En quelle année est sorti Pong, l'un des premiers jeux vidéo d'arcade ?</p>
-            <p id="answerG9" class="player-answer-G"></p>
-            <p id="answerF9" class="player-answer-F"></p>
-        </div>
         <a href="#replayGame"><i class="fas fa-angle-double-up">Rejouer</i></a>
         <a href="javascript:window.location.reload()"><button id="resetGame">Remettre à zéro</button></a>
-
     </div>
+
     <div id="badges">
         <h3 id="gifts">Quel annimal vous ressemble sur Quiz(selon le nombre de points)</h3>
         <button id="butonAnimal">Voir ton prifil animal</button>
@@ -430,51 +405,28 @@
         </div>
     </div>
     <section id="picturesGalerie">
-        <input id="mario1" type="button" value="afficher">
-        <input id="mario1bis" type="button" value="éclipser">
-        <label for="mario1">Mario 1</label>
-        <input id="mario2" type="button" value="afficher">
-        <input id="mario2bis" type="button" value="éclipser">
-        <label for="mario2">Mario 2</label>
-        <input id="mario3" type="button" value="afficher">
-        <input id="mario3bis" type="button" value="éclipser">
-        <label for="mario3">Mario 3</label>
-        <input id="mario4" type="button" value="afficher">
-        <input id="mario4bis" type="button" value="éclipser">
-        <label for="mario4">Mario 4</label>
-        <input id="mario5" type="button" value="afficher">
-        <input id="mario5bis" type="button" value="éclipser">
-        <label for="mario5">Mario 5</label>
-        <input id="mario6" type="button" value="afficher">
-        <input id="mario6bis" type="button" value="éclipser">
-        <label for="mario6">Mario 6</label>
-        <input id="mario7" type="button" value="afficher">
-        <input id="mario7bis" type="button" value="éclipser">
-        <label for="mario7">Mario 7</label>
-        <input id="mario8" type="button" value="afficher">
-        <input id="mario8bis" type="button" value="éclipser">
-        <label for="mario8">Mario 8</label>
-        <input id="mario9" type="button" value="afficher">
-        <input id="mario9bis" type="button" value="éclipser">
-        <label for="mario9">Mario 9</label>
-        <table id="table">
-            <tr id="firstLine">
-                
-                <td id="image1"><img src="img/marioOK.png"></td>
-                <td id="image2"><img src="img/marioGood.png"></td>
-                <td id="image3"><img src="img/marioFace.png"></td>
-                <td id="image4"><img src="img/Untitled.png"></td>
-                <td id="image5"><img src="img/chompignon.png"></td>
-            </tr>
-            <tr id="secondeLine">
-                <td id="image6"><img src="img/tortueMario.png"></td>
-                <td id="image7"><img src="img/marioHend.png"></td> 
-                <td id="image8"><img src="img/marioWrong.png"></td>   
-                <td id="image9"><img src="img/SMR_Yoshi.png"></td>   
-                <td id="image10"><img src="img/marioTeam.png"></td>       
-            </tr>
-        </table>
-    </section>
+        <button id="mario1">afficher</button>
+        <button id="mario1bis">éclipser</button>
+        <button id="mario2">afficher</button>
+        <button id="mario2bis">éclipser</button>
+        <button id="mario3">afficher</button>
+        <button id="mario3bis">éclipser</button>
+        <button id="mario4">afficher</button>
+        <button id="mario4bis">éclipser</button>
+        <button id="mario5">afficher</button>
+        <button id="mario5bis">éclipser</button>
+
+        <button id="mario6">afficher</button>
+        <button id="mario6bis">éclipser</button>
+        <button id="mario7">afficher</button>
+        <button id="mario7bis">éclipser</button>
+        <button id="mario8">afficher</button>
+        <button id="mario8bis">éclipser</button>
+        <button id="mario9">afficher</button>
+        <button id="mario9bis">éclipser</button>
+
+     </section>
+    
     <div id="contactUs" class="modal-container">
         <div class="modal">
 

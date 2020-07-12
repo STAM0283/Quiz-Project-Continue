@@ -1,3 +1,32 @@
+// Add name and age for the gamer : 
+let name         = document.getElementById("name");
+let age          = document.getElementById("age");
+let nameVariable = document.getElementById("nameVariable");
+let validateName = document.getElementById("validateName");
+let blue          = document.getElementById("blue");
+let black        = document.getElementById("black");
+let pink         = document.getElementById("pink");
+
+validateName.addEventListener("click", submite =>{
+    nameVariable.innerHTML = name.value;
+    
+})
+black.addEventListener("click", changeBakgroudColor => {
+        document.body.style.backgroundImage = "url('img/black-wall.png')";
+        document.body.style.color = "white"
+    
+})
+blue.addEventListener("click", changeBakgroudColor => {
+    
+        document.body.style.backgroundImage = "url('img/wall-body.png')";
+        document.body.style.color = "white"
+    
+})
+pink.addEventListener("click", changeBakgroudColor => {
+    document.body.style.backgroundImage = "url('img/purple-wall.png')";
+    document.body.style.color = "white"
+
+})
 //Ajout d'heure et date actuelle : 
 
 let newDate = document.getElementById("time");
@@ -23,11 +52,14 @@ let counter        = 0;
 
 //function of Timer :
 
+
 let miniSecondes = 0;
 let secondes     = 0;
-let minutes      = 0;
+let minutes      = 0;  
 
 let chrono = () =>{
+    
+  
 inputTimer.value =  `${minutes} : ${secondes} : ${miniSecondes}`;
     miniSecondes++;
         if(miniSecondes == 100){
@@ -466,125 +498,195 @@ nextQuestionD_8.addEventListener("click", nextD_8 => {
     question8.style.display = "block";
     });
    
+//declaration de variable pour la huitieme question : 
+
+let buttonGood8 = document.getElementById("blue-rigth8");
+let buttonWrongA_8    = document.getElementById("yellow-wrong8");
+let buttonWrongB_8 = document.getElementById("green-wrong8");
+let buttonWrongC_8 = document.getElementById("red-wrong8");
 
 
+let modalGood8     = document.getElementById("modalGood8");
+let modalWrongA_8  = document.getElementById("modalWrongA_8");
+let modalWrongB_8  = document.getElementById("modalWrongB_8");
+let modalWrongC_8  = document.getElementById("modalWrongC_8");
 
-// let lastAnswerWrong = document.getElementById("ends");
-// let lastAnswerGood = document.getElementById("end");
+// les fonctions pour la huitieme question : 
 
-// let pictureGood    = document.getElementById("marioGood");
-// let pictureWrong   = document.getElementById("marioWrong");
+buttonGood8.addEventListener("click", eventGood8 => {
+    modalGood8.style.display = "block";
+    goodSong.play();
+    counters.innerHTML   = ++counter; 
+
+})
+buttonWrongA_8.addEventListener("click", eventWrong8_1 => {
+    modalWrongA_8.style.display = "block";
+    wrongSong.play();
+});
+buttonWrongB_8.addEventListener("click", eventWrong8_2 => {
+    modalWrongB_8.style.display = "block";
+    wrongSong.play();
+});
+
+buttonWrongC_8.addEventListener("click", eventWrong8_3 => {
+    modalWrongC_8.style.display = "block";
+    wrongSong.play();
+});
 
 
+// Button next question9 : 
+
+let question9 = document.getElementById("question9");
+let nextQuestionA_9 = document.getElementById("nextQuestionA_9");
+let nextQuestionB_9 = document.getElementById("nextQuestionB_9");
+let nextQuestionC_9 = document.getElementById("nextQuestionC_9");
+let nextQuestionD_9 = document.getElementById("nextQuestionD_9");
+
+nextQuestionA_9.addEventListener("click", nextA_9 => {   
+    question9.style.display = "block";
+});
+nextQuestionB_9.addEventListener("click", nextB_9 => {   
+    question9.style.display = "block";
+    });
+nextQuestionC_9.addEventListener("click", nextC_9 => {   
+    question9.style.display = "block";
+    });
+nextQuestionD_9.addEventListener("click", nextD_9 => {   
+    question9.style.display = "block";
+    });
+   
+//declaration de variable pour la neuvieme question : 
+
+let buttonGood9 = document.getElementById("red-rigth9");
+let buttonWrongA_9    = document.getElementById("yellow-wrong9");
+let buttonWrongB_9 = document.getElementById("green-wrong9");
+let buttonWrongC_9 = document.getElementById("blue-wrong9");
 
 
+let modalGood9     = document.getElementById("modalGood9");
+let modalWrongA_9  = document.getElementById("modalWrongA_9");
+let modalWrongB_9  = document.getElementById("modalWrongB_9");
+let modalWrongC_9  = document.getElementById("modalWrongC_9");
 
-// let score = document.getElementById('showScore');
+// les fonctions pour la neuvieme question : 
 
-// lastAnswerWrong.addEventListener("click", stop => {
-//     clearInterval(timer);
-//     song.pause();
-//     score.innerHTML = `Ton score est de : ${count}/9, en ${inputTimer.value} secondes`;
-//     if(count >= 5){
-//         pictureGood.style.position = "absolute";
+buttonGood9.addEventListener("click", eventGood9 => {
+    modalGood9.style.display = "block";
+    goodSong.play();
+    counters.innerHTML   = ++counter; 
 
-//     }
-//     else{
-//         pictureWrong.style.position = "absolute";
+})
+buttonWrongA_9.addEventListener("click", eventWrong9_1 => {
+    modalWrongA_9.style.display = "block";
+    wrongSong.play();
+});
+buttonWrongB_9.addEventListener("click", eventWrong9_2 => {
+    modalWrongB_9.style.display = "block";
+    wrongSong.play();
+});
+
+buttonWrongC_9.addEventListener("click", eventWrong9_3 => {
+    modalWrongC_9.style.display = "block";
+    wrongSong.play();
+});
+
+// boutton voir les resultat : 
+let picturesGalerie  = document.getElementById("picturesGalerie");
+let badges         = document.getElementById("badges")
+let score = document.getElementById('showScore');
+let pictureGood    = document.getElementById("marioGood");
+let pictureWrong   = document.getElementById("marioWrong");
+let result         = document.getElementById("result");
+let nextResultA    = document.getElementById("nextResultA");
+let nextResultB    = document.getElementById("nextResultB");
+let nextResultC    = document.getElementById("nextResultC");
+let nextResultD    = document.getElementById("nextResultD");
+
+nextResultA.addEventListener("click", nextA => {  
+    picturesGalerie.style.display  = "block"; 
+    result.style.display = "block";
+    badges.style.display = "block";
+    clearInterval(timer);
+    song.pause();
+    score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
+    if(counter >= 5){
+        pictureGood.style.position = "absolute";
+
+    }
+    else{
+        pictureWrong.style.position = "absolute";
         
 
-//     }
+    }
 
-// })
-// lastAnswerGood.addEventListener("click", stop => {
-//     clearInterval(timer);
-//     song.pause();
-//     score.innerHTML = `Ton score est de : ${count}/9, en ${inputTimer.value} secondes`;
-//     if(count >= 5){
-//         pictureGood.style.position = "absolute";
-//         count.style.color = "green";
+});
+nextResultB.addEventListener("click", nextB => {   
+    picturesGalerie.style.display  = "block";
+    result.style.display = "block";
+    badges.style.display = "block";
+    clearInterval(timer);
+    song.pause();
+    score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
+    if(counter >= 5){
+        pictureGood.style.position = "absolute";
+
+    }
+    else{
+        pictureWrong.style.position = "absolute";
         
-//     }
-//     else{
-//         pictureWrong.style.position = "absolute";
-//         count.style.color = "red";
+    }
+  
+    });
+
+nextResultC.addEventListener("click", nextC => { 
+    picturesGalerie.style.display  = "block";  
+    result.style.display = "block";
+    badges.style.display = "block";
+    clearInterval(timer);
+    song.pause();
+    score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
+    if(counter >= 5){
+        pictureGood.style.position = "absolute";
+
+    }
+    else{
+        pictureWrong.style.position = "absolute";
         
+    }
+    });
+nextResultD.addEventListener("click", nextD => {  
+    picturesGalerie.style.display = "block";
+    result.style.display = "block";
+    badges.style.display = "block";
+    clearInterval(timer);
+    song.pause();
+    score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
+    if(counter >= 5){
+        pictureGood.style.position = "absolute";
 
-//     }
-// });
+    }
+    else{
+        pictureWrong.style.position = "absolute";
+        
+    }
+    });
 
-// // WRONG ANSWER SECTION
+// //MODAL CONTACT US
 
-// // const buttonW = document.getElementsByClassName('wrong');
-// // let x = 1;
+const modalContact = document.getElementById("contactUs");
+const buttonContact = document.getElementById("buttonContactUs");
+const buttonClose = document.getElementById("hideWindows");
 
-// // for (let i = 0; i < buttonW.length; i++) {
-// //     buttonW[i].addEventListener('click', event => {
-// //         let modalW = document.getElementById(`w${x}`);
-// //         let answerW = document.getElementById(`answerF${x}`);
-// //         let responseBtn = document.getElementById(`responseBtn${x}`);
-// //         let question = document.getElementById(`question${x+1}`);
-// //         modalW.style.display = "flex";
-// //         answerW.innerHTML = `Oups ! La bonne réponse était: ${buttonR[x-1].innerHTML}`;
-// //         answerW.style.display = "block";
-// //         responseBtn.style.display = "none";
-// //         question.style.display = "block";
-// //         
-// //         x++;
-// //         y++;
-// //     });
-// // };
+buttonContact.addEventListener('click', () => {
+    modalContact.style.display = "block";
+});
 
-// // //GOOD ANSWER SECTION
-// // let count = 0;
-// // let counter = document.getElementById('counter');
-// // counter.innerHTML = count;
-// // const buttonR = document.getElementsByClassName('rigth');
-// // let y = 1;
-
-// // for (let a = 0; a < buttonR.length; a++) {
-// //     buttonR[a].addEventListener('click', event => {
-// //         count++;
-// //         counter.innerHTML = count;
-// //         let modalG = document.getElementById(`g${y}`);
-// //         let answerG = document.getElementById(`answerG${y}`);
-// //         let responseBtn = document.getElementById(`responseBtn${y}`);
-// //         let question = document.getElementById(`question${y+1}`);
-// //         modalG.style.display = "flex";
-// //         answerG.innerHTML = `Bravo ! Tu as trouvé la bonne réponse: ${buttonR[a].innerHTML}`;
-// //         answerG.style.display = "block";
-// //         responseBtn.style.display = "none";
-// //         question.style.display = "block";
-// //        
-// //         y++;
-// //         x++;
-// //     });
-// // };
-
-// //Reset Gaming :
-// let reset = document.getElementById("resetGame")
-// reset.addEventListener("click", resetGame => {
-//     inputTimer.res;
-
-
-// })
-
-
-//MODAL CONTACT US
-
-// const modalContact = document.getElementById("contactUs");
-// const buttonContact = document.getElementById("buttonContactUs");
-// const buttonClose = document.getElementById("hideWindows");
-
-// buttonContact.addEventListener('click', () => {
-//     modalContact.style.display = "block";
-// });
-
-// buttonClose.addEventListener('click', () => {
-//     modalContact.style.display = "none";
-// });
+buttonClose.addEventListener('click', () => {
+    modalContact.style.display = "none";
+});
 
 // // filter of mario pictures:
+
 let input1 = document.getElementById("mario1");
 let image1 = document.getElementById("image1");
 let input2 = document.getElementById("mario2");
@@ -603,9 +705,10 @@ let input8 = document.getElementById("mario8");
 let image8 = document.getElementById("image8");
 let input9 = document.getElementById("mario9");
 let image9 = document.getElementById("image9");
-let input10 = document.getElementById("mario10");
-let image10= document.getElementById("image10");
+
+
 //variable pour input cachés :
+
 let mario1bis = document.getElementById("mario1bis");
 let mario2bis = document.getElementById("mario2bis");
 let mario3bis = document.getElementById("mario3bis");
@@ -669,71 +772,70 @@ input9.addEventListener("click", display => {
 // cacher l'image : 
 
 
-mario1bis.addEventListener("click", cacher => {
+mario1bis.addEventListener("click", cacher1 => {
     mario1bis.style.display = "none";
     image1.style.display = "none";
     input1.style.display = "block";
 
 
 })
-mario2bis.addEventListener("click", cacher => {
+mario2bis.addEventListener("click", cacher2 => {
     mario2bis.style.display = "none";
     image2.style.display = "none";
     input2.style.display = "block";
 
 
 })
-mario3bis.addEventListener("click", cacher => {
+mario3bis.addEventListener("click", cacher3 => {
     mario3bis.style.display = "none";
     image3.style.display = "none";
     input3.style.display = "block";
 
 
 })
-mario4bis.addEventListener("click", cacher => {
+mario4bis.addEventListener("click", cacher4 => {
     mario4bis.style.display = "none";
     image4.style.display = "none";
     input4.style.display = "block";
 
 
 })
-mario5bis.addEventListener("click", cacher => {
+mario5bis.addEventListener("click", cacher5 => {
     mario5bis.style.display = "none";
     image5.style.display = "none";
     input5.style.display = "block";
 
 
 })
-mario6bis.addEventListener("click", cacher => {
+mario6bis.addEventListener("click", cacher6 => {
     mario6bis.style.display = "none";
     image6.style.display = "none";
     input6.style.display = "block";
 
 
 })
-mario7bis.addEventListener("click", cacher => {
+mario7bis.addEventListener("click", cacher7 => {
     mario7bis.style.display = "none";
     image7.style.display = "none";
     input7.style.display = "block";
 
 
 })
-mario8bis.addEventListener("click", cacher => {
+mario8bis.addEventListener("click", cacher8 => {
     mario8bis.style.display = "none";
     image8.style.display = "none";
     input8.style.display = "block";
 
 
 })
-mario9bis.addEventListener("click", cacher => {
+mario9bis.addEventListener("click", cacher9 => {
     mario9bis.style.display = "none";
     image9.style.display = "none";
     input9.style.display = "block";
-
-
 })
 
 // profil animal :
+    
 let profilDog = document.getElementById("profil1");
 let profilLion = document.getElementById("profil2");
 let profilCat = document.getElementById("profil3");
@@ -744,29 +846,25 @@ let profilTurtle = document.getElementById("profil6");
 let displayProfil = document.getElementById("butonAnimal");
 
 displayProfil.addEventListener("click", profilGame => {
-    if(count >=0 && count <=2){
+    if(counter >=0 && counter <=2){
         profilTurtle.style.display = "block";
 
     }
-    if(count >2 && count <=4){
+    if(counter >2 && counter <=4){
         profilCat.style.display = "block";
               
     }
-    if(count >=5 && count <7){
+    if(counter >=5 && counter <7){
         profilDog.style.display = "block";             
     }
-    if(count == 7){
+    if(counter == 7){
         profilDolphin.style.display = "block";
     }
-    if(count == 8){
+    if(counter == 8){
         profilAigle.style.display = "block";
     }
-    if(count == 9){
+    if(counter == 9){
         profilLion.style.display = "block";
     }
 
 })
-
-
-
-    
