@@ -1,3 +1,32 @@
+// Add name and age for the gamer : 
+let name         = document.getElementById("name");
+let age          = document.getElementById("age");
+let nameVariable = document.getElementById("nameVariable");
+let validateName = document.getElementById("validateName");
+let blue          = document.getElementById("blue");
+let black        = document.getElementById("black");
+let pink         = document.getElementById("pink");
+
+validateName.addEventListener("click", submite =>{
+    nameVariable.innerHTML = name.value;
+    
+})
+black.addEventListener("click", changeBakgroudColor => {
+        document.body.style.backgroundImage = "url('img/black-wall.png')";
+        document.body.style.color = "white"
+    
+})
+blue.addEventListener("click", changeBakgroudColor => {
+    
+        document.body.style.backgroundImage = "url('img/wall-body.png')";
+        document.body.style.color = "white"
+    
+})
+pink.addEventListener("click", changeBakgroudColor => {
+    document.body.style.backgroundImage = "url('img/purple-wall.png')";
+    document.body.style.color = "white"
+
+})
 //Ajout d'heure et date actuelle : 
 
 let newDate = document.getElementById("time");

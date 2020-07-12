@@ -1,3 +1,24 @@
+#validateName{
+    font-size: 1.2em;
+    color: #00ccff;
+    background-color: transparent;
+    border: 2px solid #00ccff;
+    box-shadow: 0 0 20px #00ccff;
+    cursor: pointer;
+    
+}
+#name, #age{
+    background-color: transparent;
+    border-radius: 20px;
+    border: solid 3px rgb(238, 219, 243);
+    box-shadow: 0px 0px 20px #00ccff,
+                inset 0px 0px 20px #00ccff,
+                0px 0px 60px #ff00c8,
+                inset 0px 0px 60px #ff00c8;
+    font-size: large;    
+    font-weight: bold;        
+
+}
 #marioGood{
     position: fixed;
     left: 100px;
@@ -616,7 +637,7 @@ footer button:hover {
     cursor: pointer;    
 }
 /* table picture of mario*/
-tr{
+#fisrtGalerie, #secondeGalerie, #thirdGalerie{
     display: flex;
 }
 table{
@@ -650,6 +671,7 @@ td{
 #picturesGalerie{
     display: flex;
     flex-wrap: wrap;
+    display: none;
 }
 #picturesGalerie button{
     width: 4%;
@@ -665,61 +687,4 @@ td{
                 inset 0px 0px 60px #ff00c8;
 
 }
-#mario10, #mario10bis, #label10{
-    display: none;
-}
 
-/* La galerie image en Grid : */
-#galerieImages{
-    display: none;
-    grid-template-columns: 1fr 2fr 1fr;
-}
-#grid1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1 ;
-    grid-row-end: 2;
-
-}
-#grid2{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    
-}
-#grid2{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    
-}
-#grid2{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    
-}
-#grid2{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    
-}
-#grid2{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    
-}
-#grid2{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    
-}
