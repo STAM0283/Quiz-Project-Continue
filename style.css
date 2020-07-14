@@ -1,3 +1,18 @@
+#horloge{
+    display: none;
+}
+#clockOn{
+    position: absolute;
+    left: 92%;
+    cursor: pointer;
+
+}
+#clockOff{
+    position: absolute;
+    left: 92%;
+    display: none;
+    cursor: pointer;
+}
 #validateName{
     font-size: 1.2em;
     color: #00ccff;
@@ -19,15 +34,7 @@
     font-weight: bold;        
 
 }
-#marioGood{
-    position: fixed;
-    left: 100px;
 
-}
-#marioWrong{
-    position: fixed;
-    left: 100px;
-}
 /* Reset CSS : */
 *{
     box-sizing: border-box;
@@ -158,6 +165,7 @@ a {
     align-content: space-between;
     width: 50%;
 }
+
 .block-response button{
     font-weight: bold;
     width: 45%;
@@ -224,14 +232,16 @@ a {
 
 .modalGood {
     position: absolute;
+    top: auto;
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 60%;
-    height: 112px;
-    color: #01000d;
-    background-color: #04e351;
-    border-radius: 20px;
+    height: 10%;
+    background-color: #38e304;
+    border-radius: 10px;
+    color: red;
     border: 2px solid #04e351;
     box-shadow: 0 0 20px #04e351;
 }
@@ -241,11 +251,11 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: chartreuse;
     width: 60%;
-    height: 112px;
-    color: #01000d;
+    height: 10%;
     background-color: #f72747;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 2px solid #f72747;
     box-shadow: 0 0 20px #f72747;
 }
@@ -254,15 +264,11 @@ a {
  #nextQuestionC_4, #nextQuestionD_4, #nextQuestionA_5, #nextQuestionB_5, 
  #nextQuestionC_5, #nextQuestionD_5,#nextQuestionA_6, #nextQuestionB_6, 
  #nextQuestionC_6, #nextQuestionD_6, #nextQuestionA_7, #nextQuestionB_7, 
- #nextQuestionC_7, #nextQuestionD_7 {
-   margin-left: 100%;
+ #nextQuestionC_7, #nextQuestionD_7, #nextQuestionA_8, #nextQuestionB_8, 
+ #nextQuestionC_8, #nextQuestionD_8, #nextQuestionA_9, #nextQuestionB_9,#nextResultA, #nextResultB, #nextResultC, #nextResultD 
+ #nextQuestionC_9, #nextQuestionD_9 {
+   margin-left: 40%;
 };
-
-.modalGood p{
-    font-size: 1.2em;
-    text-align: center;
-    color: blue;
-}
 .modalGood a, .modalWrong a {
     display: flex;
     justify-content: center;
@@ -276,7 +282,7 @@ a {
     font-weight: bold;
     border-radius: 20px;
     border: none;
-    min-width: 50%;
+    width: 20%;
     padding: 10px;
 }
 .modalGood button:hover, .modalWrong button:hover {
@@ -284,6 +290,12 @@ a {
 }
 
 /* CSS Result */
+#answerGood, #aswerWrong{
+    position: fixed;
+    display: none;
+    left: 100px;
+
+}
 .block-result {
     display: none;
     margin: auto;
@@ -589,7 +601,6 @@ footer button:hover {
 #inputTimer{
     height: 90%;
     width: 10%;
-    flex-grow: 0.2;
     text-align: center;
     font-size: large;
     background-color: #00ccff;
@@ -598,6 +609,22 @@ footer button:hover {
                 0px 0px 60px #ff00c8,
                 inset 0px 0px 60px #ff00c8;
     font-weight: bold;            
+}
+#result1, #result2, #result3, #result4, #result5, #result6, #result7, #result8, #result9{
+    display: none;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 90%;
+    padding: 30px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 20px;
+    border: solid 3px rgb(238, 219, 243);
+    box-shadow: 0px 0px 20px #00ccff,
+                inset 0px 0px 20px #00ccff,
+                0px 0px 60px #ff00c8,
+                inset 0px 0px 60px #ff00c8;
+
 }
 #songOff {
     display: none;
@@ -616,6 +643,9 @@ footer button:hover {
     cursor: pointer;
 }
 /*gift according to the number of points : */
+#AnswerGood{
+    width: 10%;
+}
 
 #animalImage img{
     display: none;
@@ -636,55 +666,3 @@ footer button:hover {
     border-radius: 5px;    
     cursor: pointer;    
 }
-/* table picture of mario*/
-#fisrtGalerie, #secondeGalerie, #thirdGalerie{
-    display: flex;
-}
-table{
-    text-align: center;
-    border: 2px solid white;
-    box-shadow: 0px 0px 20px yellow,
-                inset 0px 0px 20px greenyellow,
-                0px 0px 60px blue,
-                inset 0px 0px 60px black;
-}
-td{
-    border: 2px solid rgb(73, 251, 53);
-    display: none;
-    box-shadow: 0px 0px 20px yellow,
-                inset 0px 0px 20px greenyellow,
-                0px 0px 60px blue,
-                inset 0px 0px 60px black;
-}
-#mario1bis,
-#mario2bis,
-#mario3bis,
-#mario4bis,
-#mario5bis,
-#mario6bis,
-#mario7bis,
-#mario8bis,
-#mario9bis,
-#mario10bis{
-    display: none;
-}
-#picturesGalerie{
-    display: flex;
-    flex-wrap: wrap;
-    display: none;
-}
-#picturesGalerie button{
-    width: 4%;
-    height: 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0px 0px 20px #00ccff,
-                inset 0px 0px 20px #00ccff,
-                0px 0px 60px #ff00c8,
-                inset 0px 0px 60px #ff00c8;
-
-}
-

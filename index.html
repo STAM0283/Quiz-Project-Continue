@@ -12,11 +12,15 @@
 <div class="counterBox">
     <img id="songOn" src="img/volumOn.svg" alt="icon pour desactiver le son">
     <img id="songOff" src="img/volumOff.svg" alt="icon pour activer le son">
-    <input id="inputTimer" value="00:00:00">
+    <img id="clockOn" src="img/clock3.png" alt="Icone Horloge">
+    <img id="clockOff" src="img/ockloc4.png" alt="Icone Horloge ">
+
+    <input id="inputTimer" value="0">
     
     <p id="counter"></p>
 </div>
 <audio id = "marioSong"src="sounds/Super Mario Bros.mp3" loop></audio>
+<audio id="horloge" src="sounds/horloge.mp3"></audio>
 
     <header> 
         <div id="time"></div><body>
@@ -29,13 +33,11 @@
             <label for="pink">Fond Rose</label>
             <input id="pink" type="radio" name="color" value="colors3">
             <label for="blue">Fond bleu</label>
-            <input id="blue" type="radio" name="color" value="colors2"><br><br>
+            <input id="blue" type="radio" name="color" value="colors2"><br><br><br>
             <label for="name">Prénom</label>
             <input id="name" type="text">
             <label for="age">Age</label>
             <input id="age" type="number">
-            
-            
             <button id="validateName">Valider</button>
             
             <a href="#introduction"><p id="introNext">Next</p></a>
@@ -46,7 +48,7 @@
 
         <div class="block-introduction">
 
-            <p>Bonjour <p id="nameVariable" style="color: crimson;" style="font-size: xx-large;"></p>et bienvenue sur le Quizz des Gamers !<br>
+            <p>Bonjour <p id="nameVariable" style="color: crimson;" style="font-size: xx-large;"></p>je te souhaite la bienvenue sur le Quizz des Gamers !<br>
                 Le but de ce jeu est simple, nous allons tester tes connaissances en jeux vidéos.
                 Sauras-tu atteindre la note maximale et rejoindre l'élite des <strong style="color: chartreuse;" style="font-size: xx-large">--G@m3rs ?--</strong><br>
                 Réponse tout de suite en répondant aux questions de notre quizz spécial retrogaming.
@@ -72,7 +74,7 @@
                     <h2>Question 1:</h2>
                     <h3>Dans quel jeu Mario apparait-il pour la première fois ?</h3>
                 </div>
-                <img class="block-image" src="img/mario03.jpg" alt="une image du jeu mario">
+                <img class="block-image" src="img/mario-question1.png" alt="une image du jeu mario">
                 <div class="block-response" id="responseBtn1">
                     <button id ="blue-rigth1" class="blue">Donkey Kong Jr.</button>
                     <button id ="green-wrong1" class="red">Mario Bros.</button>
@@ -94,7 +96,7 @@
                     <a href="#question2"><button id = "nextQuestionC_2">NEXT</button></a>
                 </div>
                 <div id="modalWrongC_1" class="modalWrong">
-                    <p>Mauvaise Reponse, </p>
+                    <p>Oups Mauvaise Reponse : ça sera mieux à la question suivante</p>
                     <a href="#question2"><button id = "nextQuestionD_2">NEXT</button></a>
                 </div>
             </div>
@@ -108,7 +110,7 @@
                     <h2>Question 2:</h2>
                     <h3>Quel est le nom du Hero des jeux Zelda ?</h3>
                 </div>
-                <img class="block-image" src="img/zelda03.png" alt="une image du jeu zelda">
+                <img class="block-image" src="img/Zelda2.png" alt="une image du jeu zelda">
                 <div class="block-response" id="responseBtn2">
                     <button id ="blue-wrong2" class="blue">Peach</button>
                     <button id ="green-wrong2" class="red">Duke</button>
@@ -116,19 +118,19 @@
                     <button id ="yellow-rigth2" class="yellow">Link</button>
                 </div>
                 <div id="modalGood2" class="modalGood">
-                    <p>Bonne Reponse : La première apparition de Link date de 1986 dans le jeu The Legend of Zelda</p>
+                    <p>Yes c'est Link, il est apparu en 1986 dans le jeu The Legend of Zelda</p>
                     <a href="#question3"><button id = "nextQuestionA_3">NEXT</button></a>
                 </div>
                 <div id="modalWrongA_2" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Non ! Peach, est une Princesse de la franchise Mario</p>
                     <a href="#question3"><button id = "nextQuestionB_3">NEXT</button></a>
                 </div>
                 <div id="modalWrongB_2" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>C'est pas ça : Duke est un personnage de la serie Duke Nukem</p>
                     <a href="#question3"><button id = "nextQuestionC_3">NEXT</button></a>
                 </div>
                 <div id="modalWrongC_2" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>C'est faut Zelda est une Princesse de la série The Legend of Zelda</p>
                     <a href="#question3"><button id = "nextQuestionD_3">NEXT</button></a>
                 </div>
 
@@ -141,29 +143,29 @@
 
             <div class="block-title">
                 <h2>Question 3:</h2>
-                <h3>Quel est le premier jeux du genre FPS ?</h3>
+                <h3>Quel est le nom de ce jeux video ?</h3>
             </div>
-            <img class="block-image" src="img/wolfenstein02.png" alt="une image du jeu wolfenstein">
+            <img class="block-image" src="img/dragon.png" alt="une image du jeu wolfenstein">
             <div class="block-response" id="responseBtn3">
-                <button id="blue-wrong3" class="blue">Call of Duty</button>
-                <button id="green-wrong3" class="red">Medal of Honor</button>
-                <button id="red-rigth3" class="green">Wolfenstein 3D</button>
-                <button id="yellow-wrong3" class="yellow">DOOM</button>
+                <button id="blue-wrong3" class="blue">Double dragon</button>
+                <button id="green-wrong3" class="red">Dragon Ball</button>
+                <button id="red-rigth3" class="green">Mortal Kombat</button>
+                <button id="yellow-wrong3" class="yellow">Dragon Age: Origins</button>
             </div>
             <div id="modalGood3" class="modalGood">
-                <p>Bonne Reponse</p>
+                <p>Effectivement c'est le legendaire jeux de combat Mortal Kombat</p>
                 <a href="#question4"><button id = "nextQuestionA_4">NEXT</button></a>
             </div>
             <div id="modalWrongA_3" class="modalWrong">
-                <p>Mauvaise Reponse</p>
+                <p>Non malheuresement, Double dragon est plutôt de type beat them all</p>
                 <a href="#question4"><button id = "nextQuestionB_4">NEXT</button></a>
             </div>
             <div id="modalWrongB_3" class="modalWrong">
-                <p>Mauvaise Reponse</p>
+                <p>C'est faut, Dragon Ball c'est plutôt un autre univers</p>
                 <a href="#question4"><button id = "nextQuestionC_4">NEXT</button></a>
             </div>
             <div id="modalWrongC_3" class="modalWrong">
-                <p>Mauvaise Reponse</p>
+                <p>Non, Dragon Age: est un jeu vidéo de rôle développé par BioWare</p>
                 <a href="#question4"><button id = "nextQuestionD_4">NEXT</button></a>
             </div>
 
@@ -186,19 +188,19 @@
                     <button id ="yellow-wrong4" class="yellow">Demolition Man</button>
                 </div>
                 <div id="modalGood4" class="modalGood">
-                    <p>Bonne Reponse</p>
+                    <p>Yes bien joué,  Mega Man (ou Megaman, et Rockman au Japon)</p>
                     <a href="#question5"><button id = "nextQuestionA_5">NEXT</button></a>
                 </div>
                 <div id="modalWrongA_4" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Pas du tout : Atomic man, chant d’amour est un spectacle</p>
                     <a href="#question5"><button id = "nextQuestionB_5">NEXT</button></a>
                 </div>
                 <div id="modalWrongB_4" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Mauvaise Reponse : On verra la prochaine question</p>
                     <a href="#question5"><button id = "nextQuestionC_5">NEXT</button></a>
                 </div>
                 <div id="modalWrongC_4" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>NON ! Demolition Man est un autre jeu vidéo d'action.</p>
                     <a href="#question5"><button id = "nextQuestionD_5">NEXT</button></a>
                 </div>
 
@@ -221,19 +223,19 @@
                     <button id ="yellow-wrong5" class="yellow">Play station 4</button>
                 </div>
                 <div id="modalGood5" class="modalGood">
-                    <p>Bonne Reponse</p>
+                    <p>Bonne Reponse : c'est sur Mega Drive</p>
                     <a href="#question6"><button id = "nextQuestionA_6">NEXT</button></a>
                 </div>
                 <div id="modalWrongA_5" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Non : Sonic est sorti avant la Dreamcast</p>
                     <a href="#question6"><button id = "nextQuestionB_6">NEXT</button></a>
                 </div>
                 <div id="modalWrongB_5" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Mauvaise Reponse : mais tu n'es pas trés loin</p>
                     <a href="#question6"><button id = "nextQuestionC_6">NEXT</button></a>
                 </div>
                 <div id="modalWrongC_5" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Mauvaise Reponse : pas sur PS4 comme même</p>
                     <a href="#question6"><button id = "nextQuestionD_6">NEXT</button></a>
                 </div>
 
@@ -251,24 +253,24 @@
                 <img class="block-image" src="img/streetFighter.jpg" alt="une image du jeu streetFighter">
                 <div class="block-response" id="responseBtn6">
                     <button id ="blue-wrong6" class="blue">Nampco</button>
-                    <button id ="green-rigth6" class="green">Capcom</button>
-                    <button id ="red-wrong6" class="red">SNK</button>
+                    <button id ="green-rigth6" class="green">SNK</button>
+                    <button id ="red-wrong6" class="red">Capcom</button>
                     <button id ="yellow-wrong6" class="yellow">Squar Enix</button>
                 </div>
                 <div id="modalGood6" class="modalGood">
-                    <p>Bonne Reponse</p>
+                    <p>Yes c'est la fameuse Capcom, Bravo !</p>
                     <a href="#question7"><button id = "nextQuestionA_7">NEXT</button></a>
                 </div>
                 <div id="modalWrongA_6" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Oups Mauvaise Reponse, c'est pas ça !</p>
                     <a href="#question7"><button id = "nextQuestionB_7">NEXT</button></a>
                 </div>
                 <div id="modalWrongB_6" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>C'est faux, mais se n'est pas trés loin</p>
                     <a href="#question7"><button id = "nextQuestionC_7">NEXT</button></a>
                 </div>
                 <div id="modalWrongC_6" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Non : Squar Enix c'est plus Final Fantasy, Dragon Quest et Kingdom Hearts</p>
                     <a href="#question7"><button id = "nextQuestionD_7">NEXT</button></a>
                 </div>
 
@@ -281,29 +283,29 @@
 
                 <div class="block-title">
                     <h2>Question 7:</h2>
-                    <h3>Que signifie NES ?</h3>
+                    <h3>En quelle est sortie la console Game Cube ?</h3>
                 </div>
-                <img class="block-image" src="img/giphy.gif" alt="gif d'un point d'interrogation">
+                <img class="block-image" src="img/consoleJeux.png" alt="image console Game Cube">
                 <div class="block-response" id="responseBtn7">
-                    <button id ="blue-wrong7" class ="blue">Nerd Entertainment Studio</button>
-                    <button id ="green-wrong7" class="red">New Entertainment Society</button>
-                    <button id ="red-wrong7" class="green">Network Entertainment Sony</button>
-                    <button id ="yellow-rigth7" class="yellow">Nintendo Entertainment System</button>
+                    <button id ="blue-wrong7" class ="blue">1999</button>
+                    <button id ="green-wrong7" class="red">2002</button>
+                    <button id ="red-wrong7" class="green">2000</button>
+                    <button id ="yellow-rigth7" class="yellow">2001</button>
                 </div>
                 <div id="modalGood7" class="modalGood">
-                    <p>Bonne Reponse</p>
+                    <p>Yes bien joué, effectivement c'est 2001</p>
                     <a href="#question8"><button id = "nextQuestionA_8">NEXT</button></a>
                 </div>
                 <div id="modalWrongA_7" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Mauvaise Reponse : mais tu n'étais pas loin</p>
                     <a href="#question8"><button id = "nextQuestionB_8">NEXT</button></a>
                 </div>
                 <div id="modalWrongB_7" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Non : 2002 c'est plutôt la date de sortie en europe</p>
                     <a href="#question8"><button id = "nextQuestionC_8">NEXT</button></a>
                 </div>
                 <div id="modalWrongC_7" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Pas de chance : il te reste encore 2 questions</p>
                     <a href="#question8"><button id = "nextQuestionD_8">NEXT</button></a>
                 </div>
 
@@ -326,19 +328,19 @@
                     <button id ="yellow-wrong8" class="yellow">Pat Man</button>
                 </div>
                 <div id="modalGood8" class="modalGood">
-                    <p>Bonne Reponse</p>
+                    <p>Bien joué, et Ben oui c'est Puck Man</p>
                     <a href="#question9"><button id = "nextQuestionA_9">NEXT</button></a>
                 </div>
                 <div id="modalWrongA_8" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Non : John William Wright Patman est un homme politique américain</p>
                     <a href="#question9"><button id = "nextQuestionB_9">NEXT</button></a>
                 </div>
                 <div id="modalWrongB_8" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>>Non ! Duck Man c'est plus une série télévisée d'animation américaine</p>
                     <a href="#question9"><button id = "nextQuestionC_9">NEXT</button></a>
                 </div>
                 <div id="modalWrongC_8" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Mauvaise Reponse : Pafman est un personnage de bande dessinée espagnol</p>
                     <a href="#question9"><button id = "nextQuestionD_9">NEXT</button></a>
                 </div>
 
@@ -351,29 +353,29 @@
 
                 <div class="block-title">
                     <h2>Question 9:</h2>
-                    <h3>En quelle année est sorti Pong, l'un des premiers jeux vidéo d'arcade ?</h3>
+                    <h3>Cette image, est tirée de quel jeux vidéo?</h3>
                 </div>
-                <img class="block-image" src="img/pong.jpg" alt="une image du jeu Pong">
+                <img class="block-image" src="img/minecraft.jpg" alt="une image du jeu Pong">
                 <div class="block-response" id="responseBtn9">
-                    <button id ="blue-wrong9" class="blue">1964</button>
-                    <button id ="green-wrong9" class="red">1968</button>
-                    <button id ="red-rigth9" class="green">1972</button>
-                    <button id ="yellow-wrong9" class="yellow">1976</button>
+                    <button id ="blue-wrong9" class="blue">Warcraft</button>
+                    <button id ="green-wrong9" class="red">Guncraft</button>
+                    <button id ="red-rigth9" class="green">Minecraft</button>
+                    <button id ="yellow-wrong9" class="yellow">Blockscape</button>
                 </div>
                 <div id="modalGood9" class="modalGood">
-                    <p>Bonne Reponse</p>
+                    <p>Bonne Reponse : Yes c'est Minecraft</p>
                     <a href="#result"><button id = "nextResultA">Voir les résultats</button></a>
                 </div>
                 <div id="modalWrongA_9" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Mauvaise Reponse : et c'est la dernière question !</p>
                     <a href="#result"><button id = "nextResultB">Voir les résultats</button></a>
                 </div>
                 <div id="modalWrongB_9" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>C'est pas ça mais tu n'est pas loin</p>
                     <a href="#result"><button id = "nextResultC">Voir les résultats</button></a>
                 </div>
                 <div id="modalWrongC_9" class="modalWrong">
-                    <p>Mauvaise Reponse</p>
+                    <p>Mauvaise Reponse: Maintenant on va voir tes résultats</p>
                     <a href="#result"><button id = "nextResultD">Voir les résultats</button></a>
                 </div>
 
@@ -381,51 +383,41 @@
 
         </section>
     </main>
-
+   
     <div class="block-result" id="result">
-           <img id="marioGood" src="img/marioOK.png">
-           <img id="marioWrong" src="img/marioWrong.png">
+        <img id="answerGood" src="img/smileyOK-1.png">
+        <img id="aswerWrong" src="img/smiley-larme1.png">
         <h2>Bravo tu as fini le Quizz!!!</h2>
         <h2 id="showScore"></h2>
         <h2>Récapitulatif des réponses :</h2>
-        <a href="#replayGame"><i class="fas fa-angle-double-up">Rejouer</i></a>
-        <a href="javascript:window.location.reload()"><button id="resetGame">Remettre à zéro</button></a>
+        <a href="javascript:window.location.reload()"><button id="resetGame">Rejouer</button></a>
+        
     </div>
+    <div id="resume">
+        <div id="result1"></div>
+        <div id="result2"></div>
+        <div id="result3"></div>
+        <div id="result4"></div>
+        <div id="result5"></div>
+        <div id="result6"></div>
+        <div id="result7"></div>
+        <div id="result8"></div>
+        <div id="result9"></div>
+    </div>
+    
 
     <div id="badges">
         <h3 id="gifts">Quel annimal vous ressemble sur Quiz(selon le nombre de points)</h3>
         <button id="butonAnimal">Voir ton prifil animal</button>
         <div id="animalImage">
-            <img id="profil1" src="img/australian-shepherd.jpg">
-            <img id="profil2" src="img/lion.jpg">
-            <img id="profil3" src="img/cat.jpg">
-            <img id="profil4" src="img/dolphin.jpg">
+            <img id="profil1" src="img/tortueMario.png">
+            <img id="profil2" src="img/SMR_Yoshi.png">
+            <img id="profil3" src="img/luigi.png">
+            <img id="profil4" src="img/mario.png">
             <img id="profil5" src="img/aigle.jpg">
             <img id="profil6" src="img/turtle.jpg">
         </div>
     </div>
-    <section id="picturesGalerie">
-        <button id="mario1">afficher</button>
-        <button id="mario1bis">éclipser</button>
-        <button id="mario2">afficher</button>
-        <button id="mario2bis">éclipser</button>
-        <button id="mario3">afficher</button>
-        <button id="mario3bis">éclipser</button>
-        <button id="mario4">afficher</button>
-        <button id="mario4bis">éclipser</button>
-        <button id="mario5">afficher</button>
-        <button id="mario5bis">éclipser</button>
-
-        <button id="mario6">afficher</button>
-        <button id="mario6bis">éclipser</button>
-        <button id="mario7">afficher</button>
-        <button id="mario7bis">éclipser</button>
-        <button id="mario8">afficher</button>
-        <button id="mario8bis">éclipser</button>
-        <button id="mario9">afficher</button>
-        <button id="mario9bis">éclipser</button>
-
-     </section>
     
     <div id="contactUs" class="modal-container">
         <div class="modal">
