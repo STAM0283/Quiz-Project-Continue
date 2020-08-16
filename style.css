@@ -694,7 +694,7 @@ footer button:hover {
   width: 10%;
 }
 
-#animalImage img {
+#characterImage img {
   display: none;
   margin: auto;
   margin-top: 20px;
@@ -702,7 +702,7 @@ footer button:hover {
 #badges {
   text-align: center;
 }
-#butonAnimal {
+#butonCharacter {
   box-shadow: 0px 0px 20px yellow, inset 0px 0px 20px greenyellow,
     0px 0px 60px blue, inset 0px 0px 60px black;
   color: white;

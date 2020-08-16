@@ -849,32 +849,32 @@ buttonClose.addEventListener("click", () => {
 
 // profile character video games :
 
-let profilTortue = document.getElementById("profil1");
-let profilLion = document.getElementById("profil2");
-let profilCat = document.getElementById("profil3");
-let profilDolphin = document.getElementById("profil4");
-let profilAigle = document.getElementById("profil5");
-let profilTurtle = document.getElementById("profil6");
+let profil1 = document.getElementById("profil1");
+let profil2 = document.getElementById("profil2");
+let profil3 = document.getElementById("profil3");
+let profil4 = document.getElementById("profil4");
+let profil5 = document.getElementById("profil5");
+let profil6 = document.getElementById("profil6");
 
-let displayProfil = document.getElementById("butonAnimal");
+let displayProfil = document.getElementById("butonCharacter");
 
 displayProfil.addEventListener("click", (profilGame) => {
   if (counter >= 0 && counter <= 2) {
-    profilTortue.style.display = "block";
+    profil1.style.display = "block";
   }
   if (counter > 2 && counter <= 4) {
-    profilCat.style.display = "block";
+    profil2.style.display = "block";
   }
   if (counter >= 5 && counter < 7) {
-    profilTortue.style.display = "block";
+    profil3.style.display = "block";
   }
   if (counter == 7) {
-    profilDolphin.style.display = "block";
+    profil4.style.display = "block";
   }
   if (counter == 8) {
-    profilAigle.style.display = "block";
+    profil5.style.display = "block";
   }
   if (counter == 9) {
-    profilLion.style.display = "block";
+    profil6.style.display = "block";
   }
 });
