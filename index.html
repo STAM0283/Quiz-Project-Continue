@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3732c215c0.js" crossorigin="anonymous"></script>
-    <title>Le Quizz du Grenier</title>
+    <title>Le Quizz des Gamers</title>
 </head>
 <body>
 <div class="counterBox">
@@ -16,24 +16,27 @@
     <img id="clockOff" src="img/ockloc4.png" alt="Icone Horloge ">
 
     <input id="inputTimer" value="0">
-    
+    <div id="root"></div>
     <p id="counter"></p>
 </div>
 <audio id = "marioSong"src="sounds/Super Mario Bros.mp3" loop></audio>
 <audio id="horloge" src="sounds/horloge.mp3"></audio>
 
     <header> 
-        <div id="time"></div><body>
-        <h1 id="replayGame">Le Quizz des Gamers</h1>
+
+        <div id="time"></div>
+        <div id="replayGame"></div>
         <img src="img/retrogamingResize.jpg" alt="une image de jeux d'arcades retro">
 
-        <div>
+        <div id="changement">
             <label for="black">Fond noir</label>
             <input id="black" type="radio" name="color" value="colors1">
             <label for="pink">Fond Rose</label>
             <input id="pink" type="radio" name="color" value="colors3">
             <label for="blue">Fond bleu</label>
-            <input id="blue" type="radio" name="color" value="colors2"><br><br><br>
+            <input id="blue" type="radio" name="color" value="colors2">
+        </div>
+        <div id="changement2">
             <label for="name">Prénom</label>
             <input id="name" type="text">
             <label for="age">Age</label>
@@ -58,6 +61,7 @@
             <a href="#question1">
                 <div class="start-link">
                     <p style="font-size: xx-large" style="color: crimson;">Start Game</p>
+                    <div id="start"></div>
                 </div>
             </a>    
             </p>
@@ -414,50 +418,31 @@
             <img id="profil2" src="img/SMR_Yoshi.png">
             <img id="profil3" src="img/luigi.png">
             <img id="profil4" src="img/mario.png">
-            <img id="profil5" src="img/aigle.jpg">
-            <img id="profil6" src="img/turtle.jpg">
+            <img id="profil5" src="img/pikachu.png">
+            <img id="profil6" src="img/street-fighter.png">
         </div>
     </div>
     
     <div id="contactUs" class="modal-container">
         <div class="modal">
 
-            <h2>L'équipe du projet <br>Le Quiz du Grenier</h2><br>
-
-            <div>
-                <h3>Guillaume</h3><br>
-                <a class="info-contact" href="https://www.linkedin.com/in/guillaume-bento-aires-7623071a3/" title="lien profil Linkedin de Guillaume" target="_blank">
-                    <i class="fab fa-3x fa-linkedin"></i>
-                    <p>guillaume-bento-aires</p>
-                </a>
-                <div class="info-contact">
-                    <i class="fas fa-3x fa-envelope"></i>
-                    <p>guillaume9469@gmail.com</p>
-                </div>
-            </div>
-                
-            <br>
-            <h3>Justine</h3><br>
-            <a class="info-contact" href="https://www.linkedin.com/in/justinehell/" title="lien profil Linkedin de Justine" target="_blank">
-                <i class="fab fa-3x fa-linkedin"></i>
-                <p>justinehell</p>
-            </a>
-            <div class="info-contact">
-                <i class="fas fa-3x fa-envelope"></i>
-                <p>hell.justine@gmail.com</p>
-            </div>
+            <h2>Le Quiz des Gamers</h2><br>
             <br>
             <h3>Amine</h3><br>
-            <a class="info-contact" href="https://www.linkedin.com/in/stambouli-d%C3%A9veloppeur/" title="lien profil Linkedin d'Amine" target="_blank">
+            <a class="info-contact" href="https://www.linkedin.com/in/stambouli-d%C3%A9veloppeur/" title="lien vers mon profil Linkedin" target="_blank">
                 <i class="fab fa-3x fa-linkedin"></i>
                 <p>stambouli-développeur</p>
+            </a>
+            <a class="info-contact" href="https://github.com/STAM0283" title="lien vers mon profil Github" target="_blank">
+                <i class="fab fa-3x fa-github"></i>
+                <p>STAM0283</p>
             </a>
             <div class="info-contact">
                 <i class="fas fa-3x fa-envelope"></i>
                 <p>aminestambouli00780@gmail.com</p>
             </div>
             <br>
-            <button id="hideWindows" onclick="inDisplay()">Fermez la fenêtre</button>          
+            <button id="hideWindows" onclick="inDisplay()" style="cursor: pointer;">Fermez la fenêtre</button>          
             
         </div>
     </div>   
@@ -467,9 +452,10 @@
             <a href="https://www.wildcodeschool.com/fr-FR" title="Site web de la wild" target="_blank">
                 <img src="img/Logo_Wild.png" alt="Logo de la Wild Code School">
             </a>
-            <span>Made with ❤️ by the Wild Code School Student - May 2020</span>
+
+            <span>Made with passion by the Wild Code School Student - May 2020</span>
             <br>
-            <span>Justine Hell - Amine Stambouli - Guillaume Bento Aires</span>
+            <span>Amine Stambouli</span>
             <br>
             <button class="Contact" id="buttonContactUs">Contactez nous</button>
         </div>
