@@ -847,6 +847,23 @@ buttonClose.addEventListener("click", () => {
   modalContact.style.display = "none";
 });
 
+// add left to right movement
+
+const titre = document.querySelector("#quizGamers");
+titre.style.position = "absolute";
+let topPos = 0;
+let direction = -1;
+const gaucheDroite = () => {
+  if (topPos == 1000) {
+    direction = 1;
+  } else if (topPos == 500) {
+    direction = -1;
+  }
+  topPos += -2 * direction;
+  titre.style.left = `${topPos}px`;
+  requestAnimationFrame(gaucheDroite);
+}
+requestAnimationFrame(gaucheDroite);
 // profile character video games :
 
 let profil1 = document.getElementById("profil1");
