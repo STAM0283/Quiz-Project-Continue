@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3732c215c0.js" crossorigin="anonymous"></script>
+    <title>Le Quizz des Gamers</title>
+</head>
+<body>
+<div class="counterBox">
+    <img id="songOn" src="img/volumOn.svg" alt="icon pour desactiver le son">
+    <img id="songOff" src="img/volumOff.svg" alt="icon pour activer le son">
+    <img id="clockOn" src="img/clock3.png" alt="Icone Horloge">
+    <img id="clockOff" src="img/ockloc4.png" alt="Icone Horloge ">
+
+    <input id="inputTimer" value="0" style="margin-left: 20%;">
+    <div id="root"></div>
+    <p id="counter"></p>
+</div>
+<audio id = "marioSong"src="sounds/Super Mario Bros.mp3" loop></audio>
+<audio id="horloge" src="sounds/horloge.mp3"></audio>
+
+    <header> 
+
+        <div id="time"></div>
+        <div id="replayGame"></div>
+        <img src="img/retrogamingResize.jpg" alt="une image de jeux d'arcades retro">
+
+        <div id="changement">
+            <label for="black">Fond noir</label>
+            <input id="black" type="radio" name="color" value="colors1">
+            <label for="pink">Fond Rose</label>
+            <input id="pink" type="radio" name="color" value="colors3">
+            <label for="blue">Fond bleu</label>
+            <input id="blue" type="radio" name="color" value="colors2">
+        </div>
+        <div id="changement2">
+            <label for="name">Prénom</label>
+            <input id="name" type="text">
+            <label for="age">Age</label>
+            <input id="age" type="number">
+            <button id="validateName">Valider</button>
+            
+            <a href="#introduction"><p id="introNext">Next</p></a>
+        </div>
+    </header>
+
+    <div id="introduction">
+
+        <div class="block-introduction">
+
+            <p>Bonjour <p id="nameVariable" style="color: crimson;" style="font-size: xx-large;"></p>je te souhaite la bienvenue sur le Quizz des Gamers !<br>
+                Le but de ce jeu est simple, nous allons tester tes connaissances en jeux vidéos.
+                Sauras-tu atteindre la note maximale et rejoindre l'élite des <strong style="color: chartreuse;" style="font-size: xx-large">--G@m3rs ?--</strong><br>
+                Réponse tout de suite en répondant aux questions de notre quizz spécial retrogaming.
+                En cas d'erreur, les bonnes réponses ainsi que le résultat seront dévoilés à la fin du quizz pour un suspens insoutenable.
+                <br>
+                GLHF !
+            <a href="#question1">
+                <div class="start-link">
+                    <p id ="startGaming">Start Game</p>
+                    <div id="start"></div>
+                </div>
+            </a>    
+            </p>
+
+            
+
+        </div>
+    </div>
+    <main>           
+        <section id='question1'>
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 1:</h2>
+                    <h3>Dans quel jeu Mario apparait-il pour la première fois ?</h3>
+                </div>
+                <img class="block-image" src="img/mario-question1.png" alt="une image du jeu mario">
+                <div class="block-response" id="responseBtn1">
+                    <button id ="blue-rigth1" class="blue">Donkey Kong Jr.</button>
+                    <button id ="green-wrong1" class="red">Mario Bros.</button>
+                    <button id ="red-wrong1" class="green">Mario Kart</button>
+                    <button id ="yellow-wrong1" class="yellow">Super Mario</button>
+                    <audio id = "goodSong" src="sounds/goodAnswer.mp3"></audio>
+                    <audio id = "wrongSong" src="sounds/wrongAnswer.mp3"></audio>
+                </div>
+                <div id="modalGood1" class="modalGood">
+                    <p>Bravo !, ça commence plutôt pas mal, continues sur cette lancée</p>
+                    <a href="#question2"><button id ="nextQuestionA_2">NEXT</button></a>
+                </div>
+                <div id="modalWrongA_1" class="modalWrong">
+                    <p>Oups Mauvaise Reponse : tentes ta chance à la Question suivante</p>
+                    <a href="#question2"><button id = "nextQuestionB_2">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_1" class="modalWrong">
+                    <p>Mauvaise Reponse, se n'est pas grave, c'est que la première question</p>
+                    <a href="#question2"><button id = "nextQuestionC_2">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_1" class="modalWrong">
+                    <p>Oups Mauvaise Reponse : ça sera mieux à la question suivante</p>
+                    <a href="#question2"><button id = "nextQuestionD_2">NEXT</button></a>
+                </div>
+            </div>
+
+        </section>
+        <section id="question2">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 2:</h2>
+                    <h3>Quel est le nom du Hero des jeux Zelda ?</h3>
+                </div>
+                <img class="block-image" src="img/Zelda2.png" alt="une image du jeu zelda">
+                <div class="block-response" id="responseBtn2">
+                    <button id ="blue-wrong2" class="blue">Peach</button>
+                    <button id ="green-wrong2" class="red">Duke</button>
+                    <button id ="red-wrong2" class="green">Zelda</button>
+                    <button id ="yellow-rigth2" class="yellow">Link</button>
+                </div>
+                <div id="modalGood2" class="modalGood">
+                    <p>Yes c'est Link, il est apparu en 1986 dans le jeu The Legend of Zelda</p>
+                    <a href="#question3"><button id = "nextQuestionA_3">NEXT</button></a>
+                </div>
+                <div id="modalWrongA_2" class="modalWrong">
+                    <p>Non ! Peach, est une Princesse de la franchise Mario</p>
+                    <a href="#question3"><button id = "nextQuestionB_3">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_2" class="modalWrong">
+                    <p>C'est pas ça : Duke est un personnage de la serie Duke Nukem</p>
+                    <a href="#question3"><button id = "nextQuestionC_3">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_2" class="modalWrong">
+                    <p>C'est faut Zelda est une Princesse de la série The Legend of Zelda</p>
+                    <a href="#question3"><button id = "nextQuestionD_3">NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question3">
+
+        <div class="block-question">
+
+            <div class="block-title">
+                <h2>Question 3:</h2>
+                <h3>Quel est le nom de ce jeux video ?</h3>
+            </div>
+            <img class="block-image" src="img/dragon.png" alt="une image du jeu wolfenstein">
+            <div class="block-response" id="responseBtn3">
+                <button id="blue-wrong3" class="blue">Double dragon</button>
+                <button id="green-wrong3" class="red">Dragon Ball</button>
+                <button id="red-rigth3" class="green">Mortal Kombat</button>
+                <button id="yellow-wrong3" class="yellow">Dragon Age: Origins</button>
+            </div>
+            <div id="modalGood3" class="modalGood">
+                <p>Effectivement c'est le legendaire jeux de combat Mortal Kombat</p>
+                <a href="#question4"><button id = "nextQuestionA_4">NEXT</button></a>
+            </div>
+            <div id="modalWrongA_3" class="modalWrong">
+                <p>Non malheuresement, Double dragon est plutôt de type beat them all</p>
+                <a href="#question4"><button id = "nextQuestionB_4">NEXT</button></a>
+            </div>
+            <div id="modalWrongB_3" class="modalWrong">
+                <p>C'est faut, Dragon Ball c'est plutôt un autre univers</p>
+                <a href="#question4"><button id = "nextQuestionC_4">NEXT</button></a>
+            </div>
+            <div id="modalWrongC_3" class="modalWrong">
+                <p>Non, Dragon Age: est un jeu vidéo de rôle développé par BioWare</p>
+                <a href="#question4"><button id = "nextQuestionD_4">NEXT</button></a>
+            </div>
+
+        </div>
+
+        </section>   
+        <section id="question4">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 4:</h2>
+                    <h3>Quel est le nom japonais de Mega Man ?</h3>
+                </div>
+                <img class="block-image" src="img/megaMan.jpg" alt="une image de Mega Man">
+                <div class="block-response" id="responseBtn4">
+                    <button id ="blue-wrong4" class="blue">Fastman</button>
+                    <button id ="green-wrong4" class="green">Atomic Man</button>
+                    <button id ="red-rigth4" class="red">Rock Man</button>
+                    <button id ="yellow-wrong4" class="yellow">Demolition Man</button>
+                </div>
+                <div id="modalGood4" class="modalGood">
+                    <p>Yes bien joué,  Mega Man (ou Megaman, et Rockman au Japon)</p>
+                    <a href="#question5"><button id = "nextQuestionA_5">NEXT</button></a>
+                </div>
+                <div id="modalWrongA_4" class="modalWrong">
+                    <p>Pas du tout : Atomic man, chant d’amour est un spectacle</p>
+                    <a href="#question5"><button id = "nextQuestionB_5">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_4" class="modalWrong">
+                    <p>Mauvaise Reponse : On verra la prochaine question</p>
+                    <a href="#question5"><button id = "nextQuestionC_5">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_4" class="modalWrong">
+                    <p>NON ! Demolition Man est un autre jeu vidéo d'action.</p>
+                    <a href="#question5"><button id = "nextQuestionD_5">NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question5">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 5:</h2>
+                    <h3>Sur quelle console Sonic a-t-il débuté ?</h3>
+                </div>
+                <img class="block-image" src="img/sonic01.jpg" alt="une image du jeux Sonic">
+                <div class="block-response" id="responseBtn5">
+                    <button id ="blue-rigth5" class="blue">Mega Drive</button>
+                    <button id ="green-wrong5" class="green">Master System</button>
+                    <button id ="red-wrong5" class="red">Dreamcast</button>
+                    <button id ="yellow-wrong5" class="yellow">Play station 4</button>
+                </div>
+                <div id="modalGood5" class="modalGood">
+                    <p>Bonne Reponse : c'est sur Mega Drive</p>
+                    <a href="#question6"><button id = "nextQuestionA_6">NEXT</button></a>
+                </div>
+                <div id="modalWrongA_5" class="modalWrong">
+                    <p>Non : Sonic est sorti avant la Dreamcast</p>
+                    <a href="#question6"><button id = "nextQuestionB_6">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_5" class="modalWrong">
+                    <p>Mauvaise Reponse : mais tu n'es pas trés loin</p>
+                    <a href="#question6"><button id = "nextQuestionC_6">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_5" class="modalWrong">
+                    <p>Mauvaise Reponse : pas sur PS4 comme même</p>
+                    <a href="#question6"><button id = "nextQuestionD_6">NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question6">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 6:</h2>
+                    <h3>La série Street Fighter est éditée par ?</h3>
+                </div>
+                <img class="block-image" src="img/streetFighter.jpg" alt="une image du jeu streetFighter">
+                <div class="block-response" id="responseBtn6">
+                    <button id ="blue-wrong6" class="blue">Nampco</button>
+                    <button id ="green-rigth6" class="green">SNK</button>
+                    <button id ="red-wrong6" class="red">Capcom</button>
+                    <button id ="yellow-wrong6" class="yellow">Squar Enix</button>
+                </div>
+                <div id="modalGood6" class="modalGood">
+                    <p>Yes c'est la fameuse Capcom, Bravo !</p>
+                    <a href="#question7"><button id = "nextQuestionA_7">NEXT</button></a>
+                </div>
+                <div id="modalWrongA_6" class="modalWrong">
+                    <p>Oups Mauvaise Reponse, c'est pas ça !</p>
+                    <a href="#question7"><button id = "nextQuestionB_7">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_6" class="modalWrong">
+                    <p>C'est faux, mais se n'est pas trés loin</p>
+                    <a href="#question7"><button id = "nextQuestionC_7">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_6" class="modalWrong">
+                    <p>Non : Squar Enix c'est plus Final Fantasy, Dragon Quest et Kingdom Hearts</p>
+                    <a href="#question7"><button id = "nextQuestionD_7">NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question7">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 7:</h2>
+                    <h3>En quelle est sortie la console Game Cube ?</h3>
+                </div>
+                <img class="block-image" src="img/consoleJeux.png" alt="image console Game Cube">
+                <div class="block-response" id="responseBtn7">
+                    <button id ="blue-wrong7" class ="blue">1999</button>
+                    <button id ="green-wrong7" class="red">2002</button>
+                    <button id ="red-wrong7" class="green">2000</button>
+                    <button id ="yellow-rigth7" class="yellow">2001</button>
+                </div>
+                <div id="modalGood7" class="modalGood">
+                    <p>Yes bien joué, effectivement c'est 2001</p>
+                    <a href="#question8"><button id = "nextQuestionA_8">NEXT</button></a>
+                </div>
+                <div id="modalWrongA_7" class="modalWrong">
+                    <p>Mauvaise Reponse : mais tu n'étais pas loin</p>
+                    <a href="#question8"><button id = "nextQuestionB_8">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_7" class="modalWrong">
+                    <p>Non : 2002 c'est plutôt la date de sortie en europe</p>
+                    <a href="#question8"><button id = "nextQuestionC_8">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_7" class="modalWrong">
+                    <p>Pas de chance : il te reste encore 2 questions</p>
+                    <a href="#question8"><button id = "nextQuestionD_8">NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question8">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 8:</h2>
+                    <h3>Au départ, comment se nommait le jeu Pac-man ?</h3>
+                </div>
+                <img class="block-image" src="img/pacman.jpg" alt="une image du jeu Pac-man">
+                <div class="block-response" id="responseBtn8">
+                    <button id ="blue-rigth8" class="blue">Puck Man</button>
+                    <button id ="green-wrong8" class="red">Duck Man</button>
+                    <button id ="red-wrong8" class="green">Paf Man</button>
+                    <button id ="yellow-wrong8" class="yellow">Pat Man</button>
+                </div>
+                <div id="modalGood8" class="modalGood">
+                    <p>Bien joué, et Ben oui c'est Puck Man</p>
+                    <a href="#question9"><button id = "nextQuestionA_9">NEXT</button></a>
+                </div>
+                <div id="modalWrongA_8" class="modalWrong">
+                    <p>Non : John William Wright Patman est un homme politique américain</p>
+                    <a href="#question9"><button id = "nextQuestionB_9">NEXT</button></a>
+                </div>
+                <div id="modalWrongB_8" class="modalWrong">
+                    <p>>Non ! Duck Man c'est plus une série télévisée d'animation américaine</p>
+                    <a href="#question9"><button id = "nextQuestionC_9">NEXT</button></a>
+                </div>
+                <div id="modalWrongC_8" class="modalWrong">
+                    <p>Mauvaise Reponse : Pafman est un personnage de bande dessinée espagnol</p>
+                    <a href="#question9"><button id = "nextQuestionD_9">NEXT</button></a>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="question9">
+
+            <div class="block-question">
+
+                <div class="block-title">
+                    <h2>Question 9:</h2>
+                    <h3>Cette image, est tirée de quel jeux vidéo?</h3>
+                </div>
+                <img class="block-image" src="img/minecraft.jpg" alt="une image du jeu Pong">
+                <div class="block-response" id="responseBtn9">
+                    <button id ="blue-wrong9" class="blue">Warcraft</button>
+                    <button id ="green-wrong9" class="red">Guncraft</button>
+                    <button id ="red-rigth9" class="green">Minecraft</button>
+                    <button id ="yellow-wrong9" class="yellow">Blockscape</button>
+                </div>
+                <div id="modalGood9" class="modalGood">
+                    <p>Bonne Reponse : Yes c'est Minecraft</p>
+                    <a href="#result"><button id = "nextResultA">Voir les résultats</button></a>
+                </div>
+                <div id="modalWrongA_9" class="modalWrong">
+                    <p>Mauvaise Reponse : et c'est la dernière question !</p>
+                    <a href="#result"><button id = "nextResultB">Voir les résultats</button></a>
+                </div>
+                <div id="modalWrongB_9" class="modalWrong">
+                    <p>C'est pas ça mais tu n'est pas loin</p>
+                    <a href="#result"><button id = "nextResultC">Voir les résultats</button></a>
+                </div>
+                <div id="modalWrongC_9" class="modalWrong">
+                    <p>Mauvaise Reponse: Maintenant on va voir tes résultats</p>
+                    <a href="#result"><button id = "nextResultD">Voir les résultats</button></a>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+   
+    <div class="block-result" id="result">
+        <h2>Bravo tu as fini le Quizz!!!</h2>
+        <h2 id="showScore"></h2>
+        <h2>Récapitulatif des réponses :</h2>
+        <a href="javascript:window.location.reload()"><button id="resetGame">Rejouer</button></a>
+        
+    </div>
+    <div id="resume">
+        <div id="result1"></div>
+        <div id="result2"></div>
+        <div id="result3"></div>
+        <div id="result4"></div>
+        <div id="result5"></div>
+        <div id="result6"></div>
+        <div id="result7"></div>
+        <div id="result8"></div>
+        <div id="result9"></div>
+    </div>
+    
+
+    <div id="badges">
+        <h3 id="gifts">Quel personnage de jeux vidéo vous ressemble sur Quiz(selon le nombre de points)</h3>
+        <button id="butonCharacter">Voir ton personnage</button>
+        <div id="characterImage">
+            <img id="profil1" src="img/tortueMario.png">
+            <img id="profil2" src="img/SMR_Yoshi.png">
+            <img id="profil3" src="img/luigi.png">
+            <img id="profil4" src="img/mario.png">
+            <img id="profil5" src="img/pikachu.png">
+            <img id="profil6" src="img/street-fighter.png">
+        </div>
+    </div>
+    
+    <div id="contactUs" class="modal-container">
+        <div class="modal">
+
+            <h2 id="quizGamers" style="margin-top: 15%;">Le Quiz des Gamers</h2><br>
+            <br>
+            <h3>Amine</h3><br>
+            <a class="info-contact" href="https://www.linkedin.com/in/stambouli-d%C3%A9veloppeur/" title="lien vers mon profil Linkedin" target="_blank">
+                <i style="color: blue;" class="fab fa-3x fa-linkedin"></i>
+                <p style="color: wheat;">stambouli-développeur</p>
+            </a>
+            <a class="info-contact" href="https://github.com/STAM0283" title="lien vers mon profil Github" target="_blank">
+                <i style="color: aqua;" class="fab fa-3x fa-github"></i>
+                <p style="color: wheat;">STAM0283</p>
+            </a>
+            <div class="info-contact">
+                <i  class="fas fa-3x fa-envelope"></i>
+                <p style="color: wheat;">aminestambouli00780@gmail.com</p>
+            </div>
+            <br>
+            <button style="background-color: #00FF7F; cursor: pointer;" id="hideWindows" onclick="inDisplay()">Fermez la fenêtre</button>          
+            
+        </div>
+    </div>   
+
+    <footer class="footerQuiz">
+        <div class="footer-info">
+            <a href="https://www.wildcodeschool.com/fr-FR" title="Site web de la wild" target="_blank">
+                <img src="img/Logo_Wild.png" alt="Logo de la Wild Code School">
+            </a>
+
+            <span>Made with passion by the Wild Code School Student - May 2020</span>
+            <br>
+            <span>Amine Stambouli</span>
+            <br>
+            <button class="Contact" id="buttonContactUs">Contactez moi</button>
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
