@@ -761,8 +761,6 @@ buttonWrongC_9.addEventListener("click", (eventWrong9_3) => {
 //let picturesGalerie  = document.getElementById("picturesGalerie");
 let badges = document.getElementById("badges");
 let score = document.getElementById("showScore");
-let pictureGood = document.getElementById("answerGood");
-let pictureWrong = document.getElementById("aswerWrong");
 let result = document.getElementById("result");
 let nextResultA = document.getElementById("nextResultA");
 let nextResultB = document.getElementById("nextResultB");
@@ -776,13 +774,7 @@ nextResultA.addEventListener("click", (nextA) => {
   clearInterval(timer);
   song.pause();
   score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
-  if (counter >= 5) {
-    pictureGood.style.position = "absolute";
-    pictureGood.style.display = "block";
-  } else {
-    pictureWrong.style.position = "absolute";
-    pictureWrong.style.display = "block";
-  }
+  
 });
 nextResultB.addEventListener("click", (nextB) => {
   //picturesGalerie.style.display  = "block";
@@ -791,13 +783,6 @@ nextResultB.addEventListener("click", (nextB) => {
   clearInterval(timer);
   song.pause();
   score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
-  if (counter >= 5) {
-    pictureGood.style.position = "absolute";
-    pictureGood.style.display = "block";
-  } else {
-    pictureWrong.style.position = "absolute";
-    pictureWrong.style.display = "block";
-  }
 });
 
 nextResultC.addEventListener("click", (nextC) => {
@@ -807,13 +792,6 @@ nextResultC.addEventListener("click", (nextC) => {
   clearInterval(timer);
   song.pause();
   score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
-  if (counter >= 5) {
-    pictureGood.style.position = "absolute";
-    pictureGood.style.display = "block";
-  } else {
-    pictureWrong.style.position = "absolute";
-    pictureWrong.style.display = "block";
-  }
 });
 
 nextResultD.addEventListener("click", (nextD) => {
@@ -823,14 +801,6 @@ nextResultD.addEventListener("click", (nextD) => {
   clearInterval(timer);
   song.pause();
   score.innerHTML = `Ton score est de : ${counter}/9, en ${inputTimer.value} secondes`;
-
-  if (counter >= 5) {
-    pictureGood.style.position = "absolute";
-    pictureGood.style.display = "block";
-  } else {
-    pictureWrong.style.position = "absolute";
-    pictureWrong.style.display = "block";
-  }
 });
 
 // //MODAL CONTACT US
